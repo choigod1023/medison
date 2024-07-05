@@ -1,10 +1,14 @@
 import * as React from "react";
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, View, Text, Pressable } from "react-native";
 import { Image } from "expo-image";
 import StatePlaceholder from "../components/StatePlaceholder";
 import { Padding, Color, FontSize, FontFamily, Border } from "../GlobalStyles";
+import { StackNavigationProp } from "@react-navigation/stack";
 
+import { useNavigation, ParamListBase } from "@react-navigation/native";
 const IPhoneSE2ndGeneration3 = () => {
+  const navigation = useNavigation<StackNavigationProp<ParamListBase>>();
+
   return (
     <View style={styles.iphoneSe2ndGeneration}>
       <View
@@ -37,15 +41,23 @@ const IPhoneSE2ndGeneration3 = () => {
           </Text>
         </View>
         <View style={styles.titleAndControls}>
-          <View style={[styles.leading, styles.leadingSpaceBlock]}>
-            <Text style={[styles.chevron, styles.label1Typo]}>􀆉</Text>
-            <Text style={styles.label}>이전</Text>
-          </View>
+          <Pressable
+            onPress={() => navigation.navigate("IPhoneSE2ndGeneration")}
+          >
+            <View style={[styles.leading, styles.leadingSpaceBlock]}>
+              <Text style={[styles.chevron, styles.label1Typo]}>􀆉</Text>
+              <Text style={styles.label}>이전</Text>
+            </View>
+          </Pressable>
           <Text style={styles.title}>전문가와 대화하기</Text>
           <View style={[styles.trailing, styles.leadingFlexBox]}>
-            <View style={styles.trailingButton1}>
-              <Text style={[styles.label1, styles.label1Typo]}>확인</Text>
-            </View>
+            <Pressable
+              onPress={() => navigation.navigate("IPhoneSE2ndGeneration")}
+            >
+              <View style={styles.trailingButton1}>
+                <Text style={[styles.label1, styles.label1Typo]}>확인</Text>
+              </View>
+            </Pressable>
           </View>
         </View>
         <View style={styles.searchField}>

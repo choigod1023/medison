@@ -4,6 +4,7 @@ import { Image } from "expo-image";
 import { StackNavigationProp } from "@react-navigation/stack";
 import { useNavigation, ParamListBase } from "@react-navigation/native";
 import { FontFamily, Color, FontSize } from "../GlobalStyles";
+import { useFonts } from "expo-font";
 
 const IPhoneSE2ndGeneration = () => {
   const navigation = useNavigation<StackNavigationProp<ParamListBase>>();
@@ -11,11 +12,17 @@ const IPhoneSE2ndGeneration = () => {
   return (
     <View style={styles.iphoneSe2ndGeneration}>
       <View style={styles.header} />
-      <Image
-        style={styles.loadingIcon}
-        contentFit="cover"
-        source={require("../assets/loading1-2.png")}
-      />
+      <Pressable
+        onPress={() => {
+          navigation.navigate("IPhoneSE2ndGeneration");
+        }}
+      >
+        <Image
+          style={styles.loadingIcon}
+          contentFit="cover"
+          source={require("../assets/loading1-2.png")}
+        />
+      </Pressable>
       <Text style={styles.title}>빠른 찾기</Text>
       <Image
         style={styles.accountPic}
@@ -68,6 +75,34 @@ const IPhoneSE2ndGeneration = () => {
       <Text style={styles.namePrompt}>이름을 알고있다면?</Text>
       <Text style={styles.directSearch}>직접 검색하기</Text>
       <Text style={styles.userMode}>일반 사용자 모드</Text>
+      <Pressable
+        onPress={() => {
+          navigation.navigate("IPhoneSE2ndGeneration3");
+        }}
+      >
+        3
+      </Pressable>
+      <Pressable
+        onPress={() => {
+          navigation.navigate("IPhoneSE2ndGeneration4");
+        }}
+      >
+        4
+      </Pressable>
+      <Pressable
+        onPress={() => {
+          navigation.navigate("IPhoneSE2ndGeneration5");
+        }}
+      >
+        5
+      </Pressable>
+      <Pressable
+        onPress={() => {
+          navigation.navigate("IPhoneSE2ndGenerationAI");
+        }}
+      >
+        AI
+      </Pressable>
     </View>
   );
 };
@@ -95,7 +130,7 @@ const styles = StyleSheet.create({
     height: 43,
     position: "absolute",
     top: 20,
-    left: "50%",
+    left: "51%",
     transform: [{ translateX: -57.5 }],
   },
   title: {
@@ -109,17 +144,17 @@ const styles = StyleSheet.create({
     position: "absolute",
   },
   accountPic: {
-    top: 20,
+    top: 26,
     left: 320,
     width: 31,
     height: 31,
     position: "absolute",
   },
   menuIcon: {
-    top: 20,
+    top: 28,
     left: 25,
-    width: 20,
     height: 26,
+    width: 20,
     position: "absolute",
   },
   aiIcon: {
@@ -133,7 +168,7 @@ const styles = StyleSheet.create({
     height: 130,
     width: 130,
     position: "absolute",
-    top: 405,
+    top: 395,
     left: 40,
   },
   qrIcon: {

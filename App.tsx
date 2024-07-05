@@ -1,7 +1,8 @@
-const Stack = createNativeStackNavigator();
 import * as React from "react";
 import { NavigationContainer } from "@react-navigation/native";
-
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import AppLoading from "expo-app-loading";
+import { useFonts } from "expo-font";
 import IPhoneSE2ndGenerationLo from "./screens/IPhoneSE2ndGenerationLo";
 import IPhoneSE2ndGeneration from "./screens/IPhoneSE2ndGeneration";
 import IPhoneSE2ndGeneration2 from "./screens/IPhoneSE2ndGeneration2";
@@ -9,24 +10,29 @@ import IPhoneSE2ndGenerationAI from "./screens/IPhoneSE2ndGenerationAI";
 import IPhoneSE2ndGeneration3 from "./screens/IPhoneSE2ndGeneration3";
 import IPhoneSE2ndGeneration4 from "./screens/IPhoneSE2ndGeneration4";
 import IPhoneSE2ndGeneration5 from "./screens/IPhoneSE2ndGeneration5";
-import StatePlaceholder from "./components/StatePlaceholder";
 
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { View, Text, Pressable, TouchableOpacity } from "react-native";
+const Stack = createNativeStackNavigator();
 
 const App = () => {
   const [hideSplashScreen, setHideSplashScreen] = React.useState(true);
+
+  // Load fonts
+  const [fontsLoaded] = useFonts({
+    SFProText: require("./assets/fonts/SF-Pro-Text-Regular.otf"),
+    Pretendard: require("./assets/fonts/Pretendard-Regular.otf"),
+    SFProDisplay: require("./assets/fonts/SF-Pro-Display-Regular.otf"),
+    NanumSquareNeo: require("./assets/fonts/NanumSquareNeoOTF-Rg.otf"),
+  });
+
+  if (!fontsLoaded) {
+    return <AppLoading />;
+  }
 
   return (
     <>
       <NavigationContainer>
         {hideSplashScreen ? (
           <Stack.Navigator screenOptions={{ headerShown: false }}>
-            {/* <Stack.Screen
-              name="IPhoneSE2ndGenerationIn"
-              component={IPhoneSE2ndGenerationIn}
-              options={{ headerShown: false }}
-            /> */}
             <Stack.Screen
               name="IPhoneSE2ndGenerationLo"
               component={IPhoneSE2ndGenerationLo}
@@ -37,11 +43,6 @@ const App = () => {
               component={IPhoneSE2ndGeneration}
               options={{ headerShown: false }}
             />
-            {/* <Stack.Screen
-              name="IPhoneSE2ndGeneration1"
-              component={IPhoneSE2ndGeneration1}
-              options={{ headerShown: false }}
-            /> */}
             <Stack.Screen
               name="IPhoneSE2ndGeneration2"
               component={IPhoneSE2ndGeneration2}
@@ -73,4 +74,5 @@ const App = () => {
     </>
   );
 };
+
 export default App;

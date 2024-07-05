@@ -98,7 +98,6 @@ const styles = StyleSheet.create({
   },
   qr: {
     marginTop: 143.5,
-    marginLeft: -128.5,
     top: "50%",
     fontSize: FontSize.size_xl,
     lineHeight: 28,
@@ -106,7 +105,6 @@ const styles = StyleSheet.create({
     color: Color.miscellaneousTextFieldBG,
     fontFamily: FontFamily.sFProDisplay,
     letterSpacing: 0,
-    left: "50%",
     position: "absolute",
   },
   frameChild: {
@@ -124,7 +122,7 @@ const styles = StyleSheet.create({
   },
   ai: {
     top: 576,
-    left: 137,
+    left: 130,
     fontSize: FontSize.size_lg,
     lineHeight: 27,
     fontWeight: "500",

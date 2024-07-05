@@ -1,17 +1,27 @@
 import * as React from "react";
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, View, Text, Pressable } from "react-native";
 import { Image } from "expo-image";
 import { FontFamily, FontSize, Color, Padding, Border } from "../GlobalStyles";
 
+import { StackNavigationProp } from "@react-navigation/stack";
+import { useNavigation, ParamListBase } from "@react-navigation/native";
 const IPhoneSE2ndGeneration5 = () => {
+  const navigation = useNavigation<StackNavigationProp<ParamListBase>>();
+
   return (
     <View style={styles.iphoneSe2ndGeneration}>
       <View style={styles.iphoneSe2ndGenerationChild} />
-      <Image
-        style={styles.loading12Icon}
-        contentFit="cover"
-        source={require("../assets/loading1-2.png")}
-      />
+      <Pressable
+        onPress={() => {
+          navigation.navigate("IPhoneSE2ndGeneration");
+        }}
+      >
+        <Image
+          style={styles.loading12Icon}
+          contentFit="cover"
+          source={require("../assets/loading1-2.png")}
+        />
+      </Pressable>
       <Image
         style={styles.accountPic1}
         contentFit="cover"
@@ -198,13 +208,12 @@ const styles = StyleSheet.create({
     position: "absolute",
   },
   loading12Icon: {
-    marginTop: -311.5,
-    marginLeft: -52.5,
-    top: "50%",
     width: 115,
     height: 43,
-    left: "50%",
     position: "absolute",
+    top: 20,
+    left: "51%",
+    transform: [{ translateX: -57.5 }],
   },
   accountPic1: {
     top: 26,

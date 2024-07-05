@@ -1,19 +1,29 @@
 import * as React from "react";
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, View, Text, Pressable } from "react-native";
 import { Image } from "expo-image";
 import { Color, FontFamily, FontSize, Border, Padding } from "../GlobalStyles";
 
+import { StackNavigationProp } from "@react-navigation/stack";
+import { useNavigation, ParamListBase } from "@react-navigation/native";
 const IPhoneSE2ndGeneration4 = () => {
+  const navigation = useNavigation<StackNavigationProp<ParamListBase>>();
+
   return (
     <View style={styles.iphoneSe2ndGeneration}>
       <View
         style={[styles.iphoneSe2ndGenerationChild, styles.iphonePosition]}
       />
-      <Image
-        style={styles.loading12Icon}
-        contentFit="cover"
-        source={require("../assets/loading1-2.png")}
-      />
+      <Pressable
+        onPress={() => {
+          navigation.navigate("IPhoneSE2ndGeneration");
+        }}
+      >
+        <Image
+          style={styles.loading12Icon}
+          contentFit="cover"
+          source={require("../assets/loading1-2.png")}
+        />
+      </Pressable>
       <Text style={styles.text}>
         <Text style={styles.text1}>5</Text>
         <Text style={styles.text2}>{`일분 중 `}</Text>
@@ -172,13 +182,12 @@ const styles = StyleSheet.create({
     left: 0,
   },
   loading12Icon: {
-    marginTop: -311.5,
-    marginLeft: -52.5,
-    top: "50%",
     width: 115,
     height: 43,
-    left: "50%",
     position: "absolute",
+    top: 20,
+    left: "51%",
+    transform: [{ translateX: -57.5 }],
   },
   text1: {
     color: Color.colorTomato,

@@ -1,10 +1,10 @@
 /* fonts */
 export const FontFamily = {
-  sFProText: "SF Pro Text",
+  sFProText: "SFProText",
   pretendard: "Pretendard",
-  sFProDisplay: "SF Pro Display",
-  nanumSquareNeo: "NanumSquare Neo",
-  bodyRegular: "SF Pro",
+  sFProDisplay: "SFProDisplay",
+  nanumSquareNeo: "NanumSquareNeo",
+  bodyRegular: "SFProText",
 };
 /* font sizes */
 export const FontSize = {
