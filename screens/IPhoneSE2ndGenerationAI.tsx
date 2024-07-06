@@ -11,64 +11,66 @@ const IPhoneSE2ndGenerationAI = () => {
   const navigation = useNavigation<StackNavigationProp<ParamListBase>>();
 
   return (
-    <View style={styles.iphoneSe2ndGenerationAi}>
-      <View
-        style={[styles.iphoneSe2ndGenerationAiChild, styles.iphonePosition]}
-      />
-      <View style={[styles.navigationBarIpadMultit, styles.leadingFlexBox]}>
-        <View style={styles.materials}>
-          <View style={styles.materialsmodeOptions} />
-        </View>
-        <View style={[styles.windowGrabber, styles.leadingSpaceBlock]}>
-          <Image
-            style={styles.dotIcon}
-            contentFit="cover"
-            source={require("../assets/dot.png")}
-          />
-          <Image
-            style={styles.dotIcon1}
-            contentFit="cover"
-            source={require("../assets/dot.png")}
-          />
-          <Image
-            style={styles.dotIcon1}
-            contentFit="cover"
-            source={require("../assets/dot.png")}
-          />
-        </View>
-        <View style={styles.prompt}>
-          <Text style={[styles.prompt1, styles.prompt1FlexBox]}>
-            This is a prompt message.
-          </Text>
-        </View>
-        <View style={styles.titleAndControls}>
-          <Pressable
-            onPress={() => {
-              navigation.navigate("IPhoneSE2ndGeneration");
-            }}
-          >
-            <View style={[styles.leading, styles.leadingSpaceBlock]}>
-              <Text style={[styles.chevron, styles.label1Typo]}>&lt;</Text>
-              <Text style={styles.label}>이전</Text>
-            </View>
-          </Pressable>
-          <Text style={styles.title}>AI 대화로 찾기</Text>
-          <View style={[styles.trailing, styles.leadingFlexBox]}>
-            <View style={styles.trailingButton1}>
-              <Text style={[styles.label1, styles.label1Typo]}>확인</Text>
+    <>
+      <View style={styles.iphoneSe2ndGenerationAi}>
+        <View
+          style={[styles.iphoneSe2ndGenerationAiChild, styles.iphonePosition]}
+        />
+        <View style={[styles.navigationBarIpadMultit, styles.leadingFlexBox]}>
+          <View style={styles.materials}>
+            <View style={styles.materialsmodeOptions} />
+          </View>
+          <View style={[styles.windowGrabber, styles.leadingSpaceBlock]}>
+            <Image
+              style={styles.dotIcon}
+              contentFit="cover"
+              source={require("../assets/dot.png")}
+            />
+            <Image
+              style={styles.dotIcon1}
+              contentFit="cover"
+              source={require("../assets/dot.png")}
+            />
+            <Image
+              style={styles.dotIcon1}
+              contentFit="cover"
+              source={require("../assets/dot.png")}
+            />
+          </View>
+          <View style={styles.prompt}>
+            <Text style={[styles.prompt1, styles.prompt1FlexBox]}>
+              This is a prompt message.
+            </Text>
+          </View>
+          <View style={styles.titleAndControls}>
+            <Pressable
+              onPress={() => {
+                navigation.navigate("IPhoneSE2ndGeneration");
+              }}
+            >
+              <View style={[styles.leading, styles.leadingSpaceBlock]}>
+                <Text style={[styles.chevron, styles.label1Typo]}>&lt;</Text>
+                <Text style={styles.label}>이전</Text>
+              </View>
+            </Pressable>
+            <Text style={styles.title}>AI 대화로 찾기</Text>
+            <View style={[styles.trailing, styles.leadingFlexBox]}>
+              <View style={styles.trailingButton1}>
+                <Text style={[styles.label1, styles.label1Typo]}>확인</Text>
+              </View>
             </View>
           </View>
-        </View>
-        <View style={styles.searchField}>
-          <StatePlaceholder
-            searchText="Search"
-            showText={false}
-            statePlaceholderPosition="unset"
-            statePlaceholderBackgroundColor="rgba(120, 120, 128, 0.24)"
-          />
+          <View style={styles.searchField}>
+            <StatePlaceholder
+              searchText="Search"
+              showText={false}
+              statePlaceholderPosition="unset"
+              statePlaceholderBackgroundColor="rgba(120, 120, 128, 0.24)"
+            />
+          </View>
         </View>
       </View>
-    </View>
+    </>
   );
 };
 

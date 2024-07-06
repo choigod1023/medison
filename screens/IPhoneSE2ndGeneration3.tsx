@@ -10,213 +10,215 @@ const IPhoneSE2ndGeneration3 = () => {
   const navigation = useNavigation<StackNavigationProp<ParamListBase>>();
 
   return (
-    <View style={styles.iphoneSe2ndGeneration}>
-      <View
-        style={[styles.iphoneSe2ndGenerationChild, styles.iphonePosition]}
-      />
-      <View style={[styles.navigationBarIpadMultit, styles.leadingFlexBox]}>
-        <View style={styles.materials}>
-          <View style={styles.materialsmodeOptions} />
-        </View>
-        <View style={[styles.windowGrabber, styles.leadingSpaceBlock]}>
-          <Image
-            style={styles.dotIcon}
-            contentFit="cover"
-            source={require("../assets/dot.png")}
-          />
-          <Image
-            style={styles.dotIcon1}
-            contentFit="cover"
-            source={require("../assets/dot.png")}
-          />
-          <Image
-            style={styles.dotIcon1}
-            contentFit="cover"
-            source={require("../assets/dot.png")}
-          />
-        </View>
-        <View style={styles.prompt}>
-          <Text style={[styles.prompt1, styles.prompt1FlexBox]}>
-            This is a prompt message.
-          </Text>
-        </View>
-        <View style={styles.titleAndControls}>
-          <Pressable
-            onPress={() => navigation.navigate("IPhoneSE2ndGeneration")}
-          >
-            <View style={[styles.leading, styles.leadingSpaceBlock]}>
-              <Text style={[styles.chevron, styles.label1Typo]}>􀆉</Text>
-              <Text style={styles.label}>이전</Text>
-            </View>
-          </Pressable>
-          <Text style={styles.title}>전문가와 대화하기</Text>
-          <View style={[styles.trailing, styles.leadingFlexBox]}>
+    <>
+      <View style={styles.iphoneSe2ndGeneration}>
+        <View
+          style={[styles.iphoneSe2ndGenerationChild, styles.iphonePosition]}
+        />
+        <View style={[styles.navigationBarIpadMultit, styles.leadingFlexBox]}>
+          <View style={styles.materials}>
+            <View style={styles.materialsmodeOptions} />
+          </View>
+          <View style={[styles.windowGrabber, styles.leadingSpaceBlock]}>
+            <Image
+              style={styles.dotIcon}
+              contentFit="cover"
+              source={require("../assets/dot.png")}
+            />
+            <Image
+              style={styles.dotIcon1}
+              contentFit="cover"
+              source={require("../assets/dot.png")}
+            />
+            <Image
+              style={styles.dotIcon1}
+              contentFit="cover"
+              source={require("../assets/dot.png")}
+            />
+          </View>
+          <View style={styles.prompt}>
+            <Text style={[styles.prompt1, styles.prompt1FlexBox]}>
+              This is a prompt message.
+            </Text>
+          </View>
+          <View style={styles.titleAndControls}>
             <Pressable
               onPress={() => navigation.navigate("IPhoneSE2ndGeneration")}
             >
-              <View style={styles.trailingButton1}>
-                <Text style={[styles.label1, styles.label1Typo]}>확인</Text>
+              <View style={[styles.leading, styles.leadingSpaceBlock]}>
+                <Text style={[styles.chevron, styles.label1Typo]}>􀆉</Text>
+                <Text style={styles.label}>이전</Text>
               </View>
             </Pressable>
-          </View>
-        </View>
-        <View style={styles.searchField}>
-          <StatePlaceholder
-            searchText="Search"
-            showText={false}
-            statePlaceholderPosition="unset"
-            statePlaceholderBackgroundColor="rgba(120, 120, 128, 0.24)"
-          />
-        </View>
-      </View>
-      <View style={[styles.iphoneStatusBar, styles.iphonePosition]}>
-        <Image
-          style={[styles.batteryIcon, styles.topRowPosition]}
-          contentFit="cover"
-          source={require("../assets/battery1.png")}
-        />
-        <Image
-          style={styles.timeIcon}
-          contentFit="cover"
-          source={require("../assets/time1.png")}
-        />
-        <View style={[styles.service, styles.leadingFlexBox]}>
-          <Image
-            style={styles.receptionIcon}
-            contentFit="cover"
-            source={require("../assets/reception1.png")}
-          />
-          <Text style={[styles.provider, styles.providerTypo]}>LG U+</Text>
-          <View style={styles.providerWrapper}>
-            <Text style={[styles.provider1, styles.providerTypo]}>LTE</Text>
-          </View>
-        </View>
-      </View>
-      <View style={styles.keyboardsIphone}>
-        <View style={styles.iphoneAlphabetQwerty}>
-          <View style={styles.bottomRow}>
-            <View style={[styles.keysLetter, styles.keysShadowBox7]}>
-              <Text style={styles.letter}>ㅋ</Text>
-            </View>
-            <View style={[styles.keysLetter1, styles.keysShadowBox6]}>
-              <Text style={styles.letter}>ㅌ</Text>
-            </View>
-            <View style={[styles.keysLetter2, styles.keysShadowBox5]}>
-              <Text style={styles.letter}>ㅊ</Text>
-            </View>
-            <View style={[styles.keysLetter3, styles.keysShadowBox4]}>
-              <Text style={styles.letter}>ㅍ</Text>
-            </View>
-            <View style={[styles.keysLetter4, styles.keysShadowBox3]}>
-              <Text style={styles.letter}>ㅠ</Text>
-            </View>
-            <View style={[styles.keysLetter5, styles.keysShadowBox2]}>
-              <Text style={styles.letter}>ㅜ</Text>
-            </View>
-            <View style={[styles.keysLetter6, styles.keysShadowBox1]}>
-              <Text style={styles.letter}>ㅡ</Text>
+            <Text style={styles.title}>전문가와 대화하기</Text>
+            <View style={[styles.trailing, styles.leadingFlexBox]}>
+              <Pressable
+                onPress={() => navigation.navigate("IPhoneSE2ndGeneration")}
+              >
+                <View style={styles.trailingButton1}>
+                  <Text style={[styles.label1, styles.label1Typo]}>확인</Text>
+                </View>
+              </Pressable>
             </View>
           </View>
-          <View style={styles.middleRow}>
-            <View style={[styles.keysLetter7, styles.keysShadowBox7]}>
-              <Text style={styles.letter}>ㅁ</Text>
-            </View>
-            <View style={[styles.keysLetter8, styles.keysShadowBox6]}>
-              <Text style={styles.letter}>ㄴ</Text>
-            </View>
-            <View style={[styles.keysLetter9, styles.keysShadowBox5]}>
-              <Text style={styles.letter}>ㅇ</Text>
-            </View>
-            <View style={[styles.keysLetter10, styles.keysShadowBox4]}>
-              <Text style={styles.letter}>ㄹ</Text>
-            </View>
-            <View style={[styles.keysLetter11, styles.keysShadowBox3]}>
-              <Text style={styles.letter}>ㅎ</Text>
-            </View>
-            <View style={[styles.keysLetter12, styles.keysShadowBox2]}>
-              <Text style={styles.letter}>ㅗ</Text>
-            </View>
-            <View style={[styles.keysLetter13, styles.keysShadowBox1]}>
-              <Text style={styles.letter}>ㅓ</Text>
-            </View>
-            <View style={[styles.keysLetter14, styles.keysShadowBox7]}>
-              <Text style={styles.letter}>ㅏ</Text>
-            </View>
-            <View style={[styles.keysLetter15, styles.keysShadowBox7]}>
-              <Text style={styles.letter}>ㅣ</Text>
-            </View>
-          </View>
-          <View style={[styles.topRow, styles.topRowPosition]}>
-            <View style={[styles.keysLetter16, styles.keysShadowBox7]}>
-              <Text style={[styles.letter16, styles.letterTypo1]}>ㅂ</Text>
-            </View>
-            <View style={[styles.keysLetter17, styles.keysShadowBox7]}>
-              <Text style={[styles.letter17, styles.letterTypo1]}>ㅈ</Text>
-            </View>
-            <View style={[styles.keysLetter18, styles.keysShadowBox7]}>
-              <Text style={[styles.letter18, styles.letterTypo1]}>ㄷ</Text>
-            </View>
-            <View style={[styles.keysLetter19, styles.keysShadowBox7]}>
-              <Text style={[styles.letter18, styles.letterTypo1]}>ㄱ</Text>
-            </View>
-            <View style={[styles.keysLetter20, styles.keysShadowBox7]}>
-              <Text style={[styles.letter18, styles.letterTypo1]}>ㅅ</Text>
-            </View>
-            <View style={[styles.keysLetter21, styles.keysShadowBox7]}>
-              <Text style={[styles.letter18, styles.letterTypo1]}>ㅛ</Text>
-            </View>
-            <View style={[styles.keysLetter22, styles.keysShadowBox7]}>
-              <Text style={[styles.letter18, styles.letterTypo1]}>ㅕ</Text>
-            </View>
-            <View style={[styles.keysLetter23, styles.keysShadowBox7]}>
-              <Text style={[styles.letter18, styles.letterTypo1]}>ㅑ</Text>
-            </View>
-            <View style={[styles.keysLetter24, styles.keysShadowBox7]}>
-              <Text style={[styles.letter18, styles.letterTypo1]}>ㅐ</Text>
-            </View>
-            <View style={[styles.keysLetter25, styles.keysShadowBox7]}>
-              <Text style={[styles.letter18, styles.letterTypo1]}>ㅔ</Text>
-            </View>
-          </View>
-          <Image
-            style={[styles.keysIcon, styles.keysIconLayout]}
-            contentFit="cover"
-            source={require("../assets/-keys--icon.png")}
-          />
-          <Image
-            style={[styles.keysIcon1, styles.keysIconLayout]}
-            contentFit="cover"
-            source={require("../assets/-keys--icon1.png")}
-          />
-        </View>
-        <View style={styles.iphoneControllerPortrait}>
-          <View style={[styles.keysLabelParent, styles.keysPosition]}>
-            <View style={[styles.keysLabel, styles.keysShadowBox]}>
-              <Text style={[styles.letter26, styles.letterTypo]}>123</Text>
-            </View>
-            <Image
-              style={[styles.keysIcon2, styles.iconLayout]}
-              contentFit="cover"
-              source={require("../assets/-keys--icon2.png")}
-            />
-            <Image
-              style={[styles.emojiIcon, styles.iconLayout]}
-              contentFit="cover"
-              source={require("../assets/emoji.png")}
+          <View style={styles.searchField}>
+            <StatePlaceholder
+              searchText="Search"
+              showText={false}
+              statePlaceholderPosition="unset"
+              statePlaceholderBackgroundColor="rgba(120, 120, 128, 0.24)"
             />
           </View>
-          <View style={[styles.space, styles.keysPosition]}>
-            <Text style={[styles.letter27, styles.letterTypo]}>스페이스</Text>
-          </View>
-          <View style={[styles.keysLabel1, styles.letter28Layout]}>
-            <Text style={[styles.letter28, styles.letter28Layout]}>확인</Text>
+        </View>
+        <View style={[styles.iphoneStatusBar, styles.iphonePosition]}>
+          <Image
+            style={[styles.batteryIcon, styles.topRowPosition]}
+            contentFit="cover"
+            source={require("../assets/battery1.png")}
+          />
+          <Image
+            style={styles.timeIcon}
+            contentFit="cover"
+            source={require("../assets/time1.png")}
+          />
+          <View style={[styles.service, styles.leadingFlexBox]}>
+            <Image
+              style={styles.receptionIcon}
+              contentFit="cover"
+              source={require("../assets/reception1.png")}
+            />
+            <Text style={[styles.provider, styles.providerTypo]}>LG U+</Text>
+            <View style={styles.providerWrapper}>
+              <Text style={[styles.provider1, styles.providerTypo]}>LTE</Text>
+            </View>
           </View>
         </View>
+        <View style={styles.keyboardsIphone}>
+          <View style={styles.iphoneAlphabetQwerty}>
+            <View style={styles.bottomRow}>
+              <View style={[styles.keysLetter, styles.keysShadowBox7]}>
+                <Text style={styles.letter}>ㅋ</Text>
+              </View>
+              <View style={[styles.keysLetter1, styles.keysShadowBox6]}>
+                <Text style={styles.letter}>ㅌ</Text>
+              </View>
+              <View style={[styles.keysLetter2, styles.keysShadowBox5]}>
+                <Text style={styles.letter}>ㅊ</Text>
+              </View>
+              <View style={[styles.keysLetter3, styles.keysShadowBox4]}>
+                <Text style={styles.letter}>ㅍ</Text>
+              </View>
+              <View style={[styles.keysLetter4, styles.keysShadowBox3]}>
+                <Text style={styles.letter}>ㅠ</Text>
+              </View>
+              <View style={[styles.keysLetter5, styles.keysShadowBox2]}>
+                <Text style={styles.letter}>ㅜ</Text>
+              </View>
+              <View style={[styles.keysLetter6, styles.keysShadowBox1]}>
+                <Text style={styles.letter}>ㅡ</Text>
+              </View>
+            </View>
+            <View style={styles.middleRow}>
+              <View style={[styles.keysLetter7, styles.keysShadowBox7]}>
+                <Text style={styles.letter}>ㅁ</Text>
+              </View>
+              <View style={[styles.keysLetter8, styles.keysShadowBox6]}>
+                <Text style={styles.letter}>ㄴ</Text>
+              </View>
+              <View style={[styles.keysLetter9, styles.keysShadowBox5]}>
+                <Text style={styles.letter}>ㅇ</Text>
+              </View>
+              <View style={[styles.keysLetter10, styles.keysShadowBox4]}>
+                <Text style={styles.letter}>ㄹ</Text>
+              </View>
+              <View style={[styles.keysLetter11, styles.keysShadowBox3]}>
+                <Text style={styles.letter}>ㅎ</Text>
+              </View>
+              <View style={[styles.keysLetter12, styles.keysShadowBox2]}>
+                <Text style={styles.letter}>ㅗ</Text>
+              </View>
+              <View style={[styles.keysLetter13, styles.keysShadowBox1]}>
+                <Text style={styles.letter}>ㅓ</Text>
+              </View>
+              <View style={[styles.keysLetter14, styles.keysShadowBox7]}>
+                <Text style={styles.letter}>ㅏ</Text>
+              </View>
+              <View style={[styles.keysLetter15, styles.keysShadowBox7]}>
+                <Text style={styles.letter}>ㅣ</Text>
+              </View>
+            </View>
+            <View style={[styles.topRow, styles.topRowPosition]}>
+              <View style={[styles.keysLetter16, styles.keysShadowBox7]}>
+                <Text style={[styles.letter16, styles.letterTypo1]}>ㅂ</Text>
+              </View>
+              <View style={[styles.keysLetter17, styles.keysShadowBox7]}>
+                <Text style={[styles.letter17, styles.letterTypo1]}>ㅈ</Text>
+              </View>
+              <View style={[styles.keysLetter18, styles.keysShadowBox7]}>
+                <Text style={[styles.letter18, styles.letterTypo1]}>ㄷ</Text>
+              </View>
+              <View style={[styles.keysLetter19, styles.keysShadowBox7]}>
+                <Text style={[styles.letter18, styles.letterTypo1]}>ㄱ</Text>
+              </View>
+              <View style={[styles.keysLetter20, styles.keysShadowBox7]}>
+                <Text style={[styles.letter18, styles.letterTypo1]}>ㅅ</Text>
+              </View>
+              <View style={[styles.keysLetter21, styles.keysShadowBox7]}>
+                <Text style={[styles.letter18, styles.letterTypo1]}>ㅛ</Text>
+              </View>
+              <View style={[styles.keysLetter22, styles.keysShadowBox7]}>
+                <Text style={[styles.letter18, styles.letterTypo1]}>ㅕ</Text>
+              </View>
+              <View style={[styles.keysLetter23, styles.keysShadowBox7]}>
+                <Text style={[styles.letter18, styles.letterTypo1]}>ㅑ</Text>
+              </View>
+              <View style={[styles.keysLetter24, styles.keysShadowBox7]}>
+                <Text style={[styles.letter18, styles.letterTypo1]}>ㅐ</Text>
+              </View>
+              <View style={[styles.keysLetter25, styles.keysShadowBox7]}>
+                <Text style={[styles.letter18, styles.letterTypo1]}>ㅔ</Text>
+              </View>
+            </View>
+            <Image
+              style={[styles.keysIcon, styles.keysIconLayout]}
+              contentFit="cover"
+              source={require("../assets/-keys--icon.png")}
+            />
+            <Image
+              style={[styles.keysIcon1, styles.keysIconLayout]}
+              contentFit="cover"
+              source={require("../assets/-keys--icon1.png")}
+            />
+          </View>
+          <View style={styles.iphoneControllerPortrait}>
+            <View style={[styles.keysLabelParent, styles.keysPosition]}>
+              <View style={[styles.keysLabel, styles.keysShadowBox]}>
+                <Text style={[styles.letter26, styles.letterTypo]}>123</Text>
+              </View>
+              <Image
+                style={[styles.keysIcon2, styles.iconLayout]}
+                contentFit="cover"
+                source={require("../assets/-keys--icon2.png")}
+              />
+              <Image
+                style={[styles.emojiIcon, styles.iconLayout]}
+                contentFit="cover"
+                source={require("../assets/emoji.png")}
+              />
+            </View>
+            <View style={[styles.space, styles.keysPosition]}>
+              <Text style={[styles.letter27, styles.letterTypo]}>스페이스</Text>
+            </View>
+            <View style={[styles.keysLabel1, styles.letter28Layout]}>
+              <Text style={[styles.letter28, styles.letter28Layout]}>확인</Text>
+            </View>
+          </View>
+        </View>
+        <Text style={styles.text}>
+          부적절한 행동이 감지되면 제재될 수 있어요.
+        </Text>
       </View>
-      <Text style={styles.text}>
-        부적절한 행동이 감지되면 제재될 수 있어요.
-      </Text>
-    </View>
+    </>
   );
 };
 

@@ -9,118 +9,125 @@ const IPhoneSE2ndGeneration5 = () => {
   const navigation = useNavigation<StackNavigationProp<ParamListBase>>();
 
   return (
-    <View style={styles.iphoneSe2ndGeneration}>
-      <View style={styles.iphoneSe2ndGenerationChild} />
-      <Pressable
-        onPress={() => {
-          navigation.navigate("IPhoneSE2ndGeneration");
-        }}
-      >
-        <Image
-          style={styles.loading12Icon}
-          contentFit="cover"
-          source={require("../assets/loading1-2.png")}
-        />
-      </Pressable>
-      <Image
-        style={styles.accountPic1}
-        contentFit="cover"
-        source={require("../assets/account-pic-1.png")}
-      />
-      <Image
-        style={styles.menu1Icon}
-        contentFit="cover"
-        source={require("../assets/menu-1.png")}
-      />
-      <View style={styles.iphoneStatusBar}>
-        <Image
-          style={[styles.batteryIcon, styles.iconPosition1]}
-          contentFit="cover"
-          source={require("../assets/battery1.png")}
-        />
-        <Image
-          style={[styles.timeIcon, styles.iconPosition1]}
-          contentFit="cover"
-          source={require("../assets/time2.png")}
-        />
-        <View style={styles.service}>
+    <>
+      <View style={styles.iphoneSe2ndGeneration}>
+        <View style={styles.iphoneSe2ndGenerationChild} />
+        <Pressable
+          onPress={() => {
+            navigation.navigate("IPhoneSE2ndGeneration");
+          }}
+        >
           <Image
-            style={styles.receptionIcon}
+            style={styles.loading12Icon}
             contentFit="cover"
-            source={require("../assets/reception1.png")}
+            source={require("../assets/loading1-2.png")}
           />
-          <Text style={[styles.provider, styles.providerTypo]}>LG U+</Text>
-          <View style={styles.providerWrapper}>
-            <Text style={styles.providerTypo}>LTE</Text>
+        </Pressable>
+        <Image
+          style={styles.accountPic1}
+          contentFit="cover"
+          source={require("../assets/account-pic-1.png")}
+        />
+        <Image
+          style={styles.menu1Icon}
+          contentFit="cover"
+          source={require("../assets/menu-1.png")}
+        />
+        <View style={styles.iphoneStatusBar}>
+          <Image
+            style={[styles.batteryIcon, styles.iconPosition1]}
+            contentFit="cover"
+            source={require("../assets/battery1.png")}
+          />
+          <Image
+            style={[styles.timeIcon, styles.iconPosition1]}
+            contentFit="cover"
+            source={require("../assets/time2.png")}
+          />
+          <View style={styles.service}>
+            <Image
+              style={styles.receptionIcon}
+              contentFit="cover"
+              source={require("../assets/reception1.png")}
+            />
+            <Text style={[styles.provider, styles.providerTypo]}>LG U+</Text>
+            <View style={styles.providerWrapper}>
+              <Text style={styles.providerTypo}>LTE</Text>
+            </View>
           </View>
         </View>
-      </View>
-      <Text style={[styles.text, styles.providerTypo]}>완료</Text>
-      <Image
-        style={styles.tylenolEr1}
-        contentFit="cover"
-        source={require("../assets/tylenol-er-11.png")}
-      />
-      <Text style={[styles.text1, styles.textTypo4]}>타이레놀</Text>
-      <Text style={[styles.text2, styles.textTypo4]}>이알서방 정</Text>
-      <Text style={[styles.text3, styles.textTypo2]}>이런 효능이 있어요</Text>
-      <Image
-        style={[styles.information1Icon, styles.iconPosition]}
-        contentFit="cover"
-        source={require("../assets/information-1.png")}
-      />
-      <Text style={[styles.text4, styles.textLayout2]}>
-        감기로 인한 발염열 및 동통(통증), 두통, 신경통, 근육통, 월경통,
-        염좌통(삔 통증)
-      </Text>
-      <View style={[styles.iphoneSe2ndGenerationItem, styles.text5Position]} />
-      <Text style={[styles.text5, styles.textFlexBox]}>
-        + 치통, 관절통, 류마티양 동통(통증)에도 쓸 수 있어요
-      </Text>
-      <Text style={[styles.text6, styles.textTypo2]}>이런 효능이 있어요</Text>
-      <Image
-        style={[styles.information3Icon, styles.iconPosition]}
-        contentFit="cover"
-        source={require("../assets/information-1.png")}
-      />
-      <Text style={[styles.text7, styles.textLayout2]}>
-        매일 세 잔 이상 정기적으로 술을 마시거나, 이 약이나 다른 해열진통제를
-        복용해야 할 경우 반드시 의사 또는 약사와 상의해야 해요. 간 손상이 유발될
-        수 있어요.
-      </Text>
-      <Text style={[styles.text8, styles.textTypo2]}>이렇게 드세요</Text>
-      <Image
-        style={[styles.information2Icon, styles.iconPosition]}
-        contentFit="cover"
-        source={require("../assets/information-1.png")}
-      />
-      <Text style={[styles.text9, styles.textLayout2]}>
-        <Text style={styles.text10}>{`만 12세 이상 소아 및 성인
-`}</Text>
-        <Text style={styles.textTypo2}>
-          1회 1~2정씩 1일 3~4회 (4~6시간마다) 필요시 복용
+        <Text style={[styles.text, styles.providerTypo]}>완료</Text>
+        <Image
+          style={styles.tylenolEr1}
+          contentFit="cover"
+          source={require("../assets/tylenol-er-11.png")}
+        />
+        <Text style={[styles.text1, styles.textTypo4]}>타이레놀</Text>
+        <Text style={[styles.text2, styles.textTypo4]}>이알서방 정</Text>
+        <Text style={[styles.text3, styles.textTypo2]}>이런 효능이 있어요</Text>
+        <Image
+          style={[styles.information1Icon, styles.iconPosition]}
+          contentFit="cover"
+          source={require("../assets/information-1.png")}
+        />
+        <Text style={[styles.text4, styles.textLayout2]}>
+          감기로 인한 발염열 및 동통(통증), 두통, 신경통, 근육통, 월경통,
+          염좌통(삔 통증)
         </Text>
-      </Text>
-      <View
-        style={[styles.iphoneSe2ndGenerationInner, styles.text12Position]}
-      />
-      <Text style={[styles.text12, styles.text12Position]}>
-        오늘 1번 더 드실 수 있어요
-      </Text>
-      <View style={[styles.rectangleView, styles.textLayout]} />
-      <View
-        style={[styles.iphoneSe2ndGenerationChild1, styles.iphoneChildPosition]}
-      />
-      <View
-        style={[styles.iphoneSe2ndGenerationChild2, styles.text13Position]}
-      />
-      <Text style={[styles.text13, styles.textTypo]}>공유하기</Text>
-      <Text style={[styles.text14, styles.textTypo]}>{`􀈂 `}</Text>
-      <Text style={[styles.text15, styles.textLayout]}>다른 약 찾기</Text>
-      <Text style={[styles.text16, styles.iphoneChildPosition]}>
-        더 알아보기
-      </Text>
-    </View>
+        <View
+          style={[styles.iphoneSe2ndGenerationItem, styles.text5Position]}
+        />
+        <Text style={[styles.text5, styles.textFlexBox]}>
+          + 치통, 관절통, 류마티양 동통(통증)에도 쓸 수 있어요
+        </Text>
+        <Text style={[styles.text6, styles.textTypo2]}>이런 효능이 있어요</Text>
+        <Image
+          style={[styles.information3Icon, styles.iconPosition]}
+          contentFit="cover"
+          source={require("../assets/information-1.png")}
+        />
+        <Text style={[styles.text7, styles.textLayout2]}>
+          매일 세 잔 이상 정기적으로 술을 마시거나, 이 약이나 다른 해열진통제를
+          복용해야 할 경우 반드시 의사 또는 약사와 상의해야 해요. 간 손상이
+          유발될 수 있어요.
+        </Text>
+        <Text style={[styles.text8, styles.textTypo2]}>이렇게 드세요</Text>
+        <Image
+          style={[styles.information2Icon, styles.iconPosition]}
+          contentFit="cover"
+          source={require("../assets/information-1.png")}
+        />
+        <Text style={[styles.text9, styles.textLayout2]}>
+          <Text style={styles.text10}>{`만 12세 이상 소아 및 성인
+`}</Text>
+          <Text style={styles.textTypo2}>
+            1회 1~2정씩 1일 3~4회 (4~6시간마다) 필요시 복용
+          </Text>
+        </Text>
+        <View
+          style={[styles.iphoneSe2ndGenerationInner, styles.text12Position]}
+        />
+        <Text style={[styles.text12, styles.text12Position]}>
+          오늘 1번 더 드실 수 있어요
+        </Text>
+        <View style={[styles.rectangleView, styles.textLayout]} />
+        <View
+          style={[
+            styles.iphoneSe2ndGenerationChild1,
+            styles.iphoneChildPosition,
+          ]}
+        />
+        <View
+          style={[styles.iphoneSe2ndGenerationChild2, styles.text13Position]}
+        />
+        <Text style={[styles.text13, styles.textTypo]}>공유하기</Text>
+        <Text style={[styles.text14, styles.textTypo]}>{`􀈂 `}</Text>
+        <Text style={[styles.text15, styles.textLayout]}>다른 약 찾기</Text>
+        <Text style={[styles.text16, styles.iphoneChildPosition]}>
+          더 알아보기
+        </Text>
+      </View>
+    </>
   );
 };
 
@@ -156,6 +163,7 @@ const styles = StyleSheet.create({
   },
   textLayout2: {
     lineHeight: 18,
+    marginRight: 50,
     fontSize: FontSize.footnoteRegular_size,
   },
   text5Position: {

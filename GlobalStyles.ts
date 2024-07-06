@@ -5,6 +5,7 @@ export const FontFamily = {
   sFProDisplay: "SFProDisplay",
   nanumSquareNeo: "NanumSquareNeo",
   bodyRegular: "SFProText",
+  headlineRegular: "SF Pro",
 };
 /* font sizes */
 export const FontSize = {
@@ -14,13 +15,16 @@ export const FontSize = {
   size_sm: 14,
   size_3xs: 10,
   size_23xl: 42,
-  bodyRegular_size: 17,
-  footnoteRegular_size: 13,
+  bodyRegular_size: 15,
+
+  headlineRegular_size: 12,
+  footnoteRegular_size: 12,
   size_base: 16,
   size_5xl: 24,
   size_3xl: 22,
   size_15xl: 34,
-  size_smi_5: 13,
+  size_smi_5: 12,
+  size_2xl: 21,
 };
 /* Colors */
 export const Color = {
@@ -49,6 +53,7 @@ export const Color = {
   colorDarkgray: "rgba(179, 179, 179, 0.82)",
   labelsSecondary: "rgba(235, 235, 245, 0.6)",
   colorsBlue1: "#0a84ff",
+  colorGainsboro: "#d9d9d9",
 };
 /* Paddings */
 export const Padding = {

@@ -9,96 +9,98 @@ const IPhoneSE2ndGeneration4 = () => {
   const navigation = useNavigation<StackNavigationProp<ParamListBase>>();
 
   return (
-    <View style={styles.iphoneSe2ndGeneration}>
-      <View
-        style={[styles.iphoneSe2ndGenerationChild, styles.iphonePosition]}
-      />
-      <Pressable
-        onPress={() => {
-          navigation.navigate("IPhoneSE2ndGeneration");
-        }}
-      >
-        <Image
-          style={styles.loading12Icon}
-          contentFit="cover"
-          source={require("../assets/loading1-2.png")}
+    <>
+      <View style={styles.iphoneSe2ndGeneration}>
+        <View
+          style={[styles.iphoneSe2ndGenerationChild, styles.iphonePosition]}
         />
-      </Pressable>
-      <Text style={styles.text}>
-        <Text style={styles.text1}>5</Text>
-        <Text style={styles.text2}>{`일분 중 `}</Text>
-        <Text style={styles.text1}>3</Text>
-        <Text style={styles.text2}>일차</Text>
-      </Text>
-      <Image
-        style={styles.accountPic1}
-        contentFit="cover"
-        source={require("../assets/account-pic-1.png")}
-      />
-      <Image
-        style={styles.menu1Icon}
-        contentFit="cover"
-        source={require("../assets/menu-1.png")}
-      />
-      <View style={[styles.iphoneStatusBar, styles.iphonePosition]}>
-        <Image
-          style={[styles.batteryIcon, styles.iconPosition]}
-          contentFit="cover"
-          source={require("../assets/battery1.png")}
-        />
-        <Image
-          style={[styles.timeIcon, styles.iconPosition]}
-          contentFit="cover"
-          source={require("../assets/time1.png")}
-        />
-        <View style={styles.service}>
+        <Pressable
+          onPress={() => {
+            navigation.navigate("IPhoneSE2ndGeneration");
+          }}
+        >
           <Image
-            style={styles.receptionIcon}
+            style={styles.loading12Icon}
             contentFit="cover"
-            source={require("../assets/reception1.png")}
+            source={require("../assets/loading1-2.png")}
           />
-          <Text style={[styles.provider, styles.textTypo5]}>LG U+</Text>
-          <View style={styles.providerWrapper}>
-            <Text style={styles.textTypo5}>LTE</Text>
+        </Pressable>
+        <Text style={styles.text}>
+          <Text style={styles.text1}>5</Text>
+          <Text style={styles.text2}>{`일분 중 `}</Text>
+          <Text style={styles.text1}>3</Text>
+          <Text style={styles.text2}>일차</Text>
+        </Text>
+        <Image
+          style={styles.accountPic1}
+          contentFit="cover"
+          source={require("../assets/account-pic-1.png")}
+        />
+        <Image
+          style={styles.menu1Icon}
+          contentFit="cover"
+          source={require("../assets/menu-1.png")}
+        />
+        <View style={[styles.iphoneStatusBar, styles.iphonePosition]}>
+          <Image
+            style={[styles.batteryIcon, styles.iconPosition]}
+            contentFit="cover"
+            source={require("../assets/battery1.png")}
+          />
+          <Image
+            style={[styles.timeIcon, styles.iconPosition]}
+            contentFit="cover"
+            source={require("../assets/time1.png")}
+          />
+          <View style={styles.service}>
+            <Image
+              style={styles.receptionIcon}
+              contentFit="cover"
+              source={require("../assets/reception1.png")}
+            />
+            <Text style={[styles.provider, styles.textTypo5]}>LG U+</Text>
+            <View style={styles.providerWrapper}>
+              <Text style={styles.textTypo5}>LTE</Text>
+            </View>
           </View>
         </View>
+        <Text style={[styles.text5, styles.textTypo4]}>진통제</Text>
+        <View
+          style={[styles.iphoneSe2ndGenerationItem, styles.rectangleViewLayout]}
+        />
+        <Text style={[styles.text6, styles.textTypo5]}>완료</Text>
+        <View
+          style={[styles.iphoneSe2ndGenerationInner, styles.lineViewLayout]}
+        />
+        <Image
+          style={[styles.tylenolEr1, styles.tylenolEr1Layout]}
+          contentFit="cover"
+          source={require("../assets/tylenol-er-1.png")}
+        />
+        <Text style={[styles.text7, styles.textTypo3]}>타이레놀</Text>
+        <Text style={[styles.text8, styles.textTypo2]}>이알서방 정</Text>
+        <Text style={[styles.text9, styles.textTypo]}>
+          <Text style={styles.text1}>두 알</Text>
+          <Text style={styles.text2}> 드세요.</Text>
+        </Text>
+        <Text style={[styles.text12, styles.text12Position]}>진통제</Text>
+        <View style={[styles.rectangleView, styles.text12Position]} />
+        <Text style={[styles.text13, styles.textTypo5]}>완료</Text>
+        <View style={[styles.lineView, styles.lineViewLayout]} />
+        <Text style={[styles.text14, styles.text14Position]}>슈다페드</Text>
+        <Text style={[styles.text15, styles.textTypo2]}>정</Text>
+        <Text style={[styles.text16, styles.textTypo]}>
+          <Text style={styles.text1}>한 알</Text>
+          <Text style={styles.text2}> 드세요.</Text>
+        </Text>
+        <Image
+          style={[styles.shdaped1Icon, styles.text14Position]}
+          contentFit="cover"
+          source={require("../assets/shdaped-1.png")}
+        />
+        <Text style={[styles.text19, styles.textTypo]}>아침 복용분이에요.</Text>
       </View>
-      <Text style={[styles.text5, styles.textTypo4]}>진통제</Text>
-      <View
-        style={[styles.iphoneSe2ndGenerationItem, styles.rectangleViewLayout]}
-      />
-      <Text style={[styles.text6, styles.textTypo5]}>완료</Text>
-      <View
-        style={[styles.iphoneSe2ndGenerationInner, styles.lineViewLayout]}
-      />
-      <Image
-        style={[styles.tylenolEr1, styles.tylenolEr1Layout]}
-        contentFit="cover"
-        source={require("../assets/tylenol-er-1.png")}
-      />
-      <Text style={[styles.text7, styles.textTypo3]}>타이레놀</Text>
-      <Text style={[styles.text8, styles.textTypo2]}>이알서방 정</Text>
-      <Text style={[styles.text9, styles.textTypo]}>
-        <Text style={styles.text1}>두 알</Text>
-        <Text style={styles.text2}> 드세요.</Text>
-      </Text>
-      <Text style={[styles.text12, styles.text12Position]}>진통제</Text>
-      <View style={[styles.rectangleView, styles.text12Position]} />
-      <Text style={[styles.text13, styles.textTypo5]}>완료</Text>
-      <View style={[styles.lineView, styles.lineViewLayout]} />
-      <Text style={[styles.text14, styles.text14Position]}>슈다페드</Text>
-      <Text style={[styles.text15, styles.textTypo2]}>정</Text>
-      <Text style={[styles.text16, styles.textTypo]}>
-        <Text style={styles.text1}>한 알</Text>
-        <Text style={styles.text2}> 드세요.</Text>
-      </Text>
-      <Image
-        style={[styles.shdaped1Icon, styles.text14Position]}
-        contentFit="cover"
-        source={require("../assets/shdaped-1.png")}
-      />
-      <Text style={[styles.text19, styles.textTypo]}>아침 복용분이에요.</Text>
-    </View>
+    </>
   );
 };
 

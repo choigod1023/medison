@@ -10,26 +10,28 @@ const IPhoneSE2ndGenerationLo = () => {
   const navigation = useNavigation<StackNavigationProp<ParamListBase>>();
 
   return (
-    <View style={styles.iphoneSe2ndGenerationLo}>
-      <Pressable
-        style={styles.tapScreenToContainer}
-        onPress={() => {
-          navigation.navigate("IPhoneSE2ndGeneration");
-        }}
-      >
+    <>
+      <View style={styles.iphoneSe2ndGenerationLo}>
+        <Pressable
+          style={styles.tapScreenToContainer}
+          onPress={() => {
+            navigation.navigate("IPhoneSE2ndGeneration");
+          }}
+        >
+          <Image
+            style={styles.loading11Icon}
+            contentFit="cover"
+            source={require("../assets/loading1-1.png")}
+          />
+        </Pressable>
+        <Text style={styles.poweredBy}>Powered by</Text>
         <Image
-          style={styles.loading11Icon}
+          style={styles.loading21Icon}
           contentFit="cover"
-          source={require("../assets/loading1-1.png")}
+          source={require("../assets/loading2-1.png")}
         />
-      </Pressable>
-      <Text style={styles.poweredBy}>Powered by</Text>
-      <Image
-        style={styles.loading21Icon}
-        contentFit="cover"
-        source={require("../assets/loading2-1.png")}
-      />
-    </View>
+      </View>
+    </>
   );
 };
 

@@ -10,100 +10,109 @@ const IPhoneSE2ndGeneration = () => {
   const navigation = useNavigation<StackNavigationProp<ParamListBase>>();
 
   return (
-    <View style={styles.iphoneSe2ndGeneration}>
-      <View style={styles.header} />
-      <Pressable
-        onPress={() => {
-          navigation.navigate("IPhoneSE2ndGeneration");
-        }}
-      >
+    <>
+      <View style={styles.iphoneSe2ndGeneration}>
+        <View style={styles.header} />
+        <Pressable
+          onPress={() => {
+            navigation.navigate("IPhoneSE2ndGeneration");
+          }}
+        >
+          <Image
+            style={styles.loadingIcon}
+            contentFit="cover"
+            source={require("../assets/loading1-2.png")}
+          />
+        </Pressable>
+        <Text style={styles.title}>빠른 찾기</Text>
         <Image
-          style={styles.loadingIcon}
+          style={styles.accountPic}
           contentFit="cover"
-          source={require("../assets/loading1-2.png")}
+          source={require("../assets/account-pic-1.png")}
         />
-      </Pressable>
-      <Text style={styles.title}>빠른 찾기</Text>
-      <Image
-        style={styles.accountPic}
-        contentFit="cover"
-        source={require("../assets/account-pic-1.png")}
-      />
-      <Image
-        style={styles.menuIcon}
-        contentFit="cover"
-        source={require("../assets/menu-1.png")}
-      />
-      <Pressable
-        onPress={() => {
-          navigation.navigate("IPhoneSE2ndGenerationAI");
-        }}
-      >
         <Image
-          style={styles.aiIcon}
+          style={styles.menuIcon}
           contentFit="cover"
-          source={require("../assets/ai--1.png")}
+          source={require("../assets/menu-1.png")}
         />
-      </Pressable>
-      <Image
-        style={styles.mainIcon}
-        contentFit="cover"
-        source={require("../assets/--1.png")}
-      />
-      <Pressable
-        onPress={() => {
-          navigation.navigate("IPhoneSE2ndGeneration2");
-        }}
-      >
+        <Pressable
+          onPress={() => {
+            navigation.navigate("IPhoneSE2ndGenerationAI");
+          }}
+        >
+          <Image
+            style={styles.aiIcon}
+            contentFit="cover"
+            source={require("../assets/ai--1.png")}
+          />
+        </Pressable>
         <Image
-          style={styles.qrIcon}
+          style={styles.mainIcon}
           contentFit="cover"
-          source={require("../assets/qr--1.png")}
+          source={require("../assets/--1.png")}
         />
-      </Pressable>
-      <Pressable
-        onPress={() => {
-          navigation.navigate("IPhoneSE2ndGeneration2");
-        }}
-      >
-        <Image
-          style={styles.secondaryIcon}
-          contentFit="cover"
-          source={require("../assets/--11.png")}
-        />
-      </Pressable>
-      <Text style={styles.namePrompt}>이름을 알고있다면?</Text>
-      <Text style={styles.directSearch}>직접 검색하기</Text>
-      <Text style={styles.userMode}>일반 사용자 모드</Text>
-      <Pressable
-        onPress={() => {
-          navigation.navigate("IPhoneSE2ndGeneration3");
-        }}
-      >
-        3
-      </Pressable>
-      <Pressable
-        onPress={() => {
-          navigation.navigate("IPhoneSE2ndGeneration4");
-        }}
-      >
-        4
-      </Pressable>
-      <Pressable
-        onPress={() => {
-          navigation.navigate("IPhoneSE2ndGeneration5");
-        }}
-      >
-        5
-      </Pressable>
-      <Pressable
-        onPress={() => {
-          navigation.navigate("IPhoneSE2ndGenerationAI");
-        }}
-      >
-        AI
-      </Pressable>
-    </View>
+        <Pressable
+          onPress={() => {
+            navigation.navigate("IPhoneSE2ndGeneration2");
+          }}
+        >
+          <Image
+            style={styles.qrIcon}
+            contentFit="cover"
+            source={require("../assets/qr--1.png")}
+          />
+        </Pressable>
+        <Pressable
+          onPress={() => {
+            navigation.navigate("IPhoneSE2ndGeneration2");
+          }}
+        >
+          <Image
+            style={styles.secondaryIcon}
+            contentFit="cover"
+            source={require("../assets/--11.png")}
+          />
+        </Pressable>
+        <Text style={styles.namePrompt}>이름을 알고있다면?</Text>
+        <Text style={styles.directSearch}>직접 검색하기</Text>
+        <Text style={styles.userMode}>일반 사용자 모드</Text>
+        <Pressable
+          onPress={() => {
+            navigation.navigate("IPhoneSE2ndGeneration3");
+          }}
+        >
+          3
+        </Pressable>
+        <Pressable
+          onPress={() => {
+            navigation.navigate("IPhoneSE2ndGeneration4");
+          }}
+        >
+          4
+        </Pressable>
+        <Pressable
+          onPress={() => {
+            navigation.navigate("IPhoneSE2ndGeneration5");
+          }}
+        >
+          5
+        </Pressable>
+        <Pressable
+          onPress={() => {
+            navigation.navigate("IPhoneSE2ndGeneration6");
+          }}
+        >
+          6
+        </Pressable>
+        <Pressable
+          onPress={() => {
+            navigation.navigate("IPhoneSE2ndGenerationAI");
+          }}
+        >
+          AI
+        </Pressable>
+      </View>
+    </>
   );
 };
 

@@ -10,6 +10,7 @@ import IPhoneSE2ndGenerationAI from "./screens/IPhoneSE2ndGenerationAI";
 import IPhoneSE2ndGeneration3 from "./screens/IPhoneSE2ndGeneration3";
 import IPhoneSE2ndGeneration4 from "./screens/IPhoneSE2ndGeneration4";
 import IPhoneSE2ndGeneration5 from "./screens/IPhoneSE2ndGeneration5";
+import IPhoneSE2ndGeneration6 from "./screens/IPhoneSE2ndGeneration6";
 
 const Stack = createNativeStackNavigator();
 
@@ -66,6 +67,11 @@ const App = () => {
             <Stack.Screen
               name="IPhoneSE2ndGeneration5"
               component={IPhoneSE2ndGeneration5}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="IPhoneSE2ndGeneration6"
+              component={IPhoneSE2ndGeneration6}
               options={{ headerShown: false }}
             />
           </Stack.Navigator>

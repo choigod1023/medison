@@ -6,53 +6,57 @@ import { FontFamily, FontSize, Color, Padding } from "../GlobalStyles";
 
 const IPhoneSE2ndGeneration2 = () => {
   return (
-    <View style={styles.iphoneSe2ndGeneration}>
-      <View
-        style={[styles.iphoneSe2ndGenerationChild, styles.iphonePosition]}
-      />
-      <View style={[styles.iphoneSe2ndGenerationItem, styles.iphonePosition]} />
-      <View
-        style={[styles.iphoneSe2ndGenerationInner, styles.iphonePosition]}
-      />
-      <Text style={styles.qr}>
-        의약품 또는 약 봉투의 QR코드를 사각형 안에 놓으세요.
-      </Text>
-      <View style={styles.frameView}>
-        <View style={styles.frameChild} />
-      </View>
-      <Text style={styles.ai}>AI 대화로 찾기</Text>
-      <NavigationBarIPadMultit
-        title="이미지 스캔"
-        showBackground={false}
-        showLeading
-        showPrompt={false}
-        showSearch={false}
-        showTrailing
-      />
-      <View style={[styles.iphoneStatusBar, styles.iphonePosition]}>
-        <Image
-          style={[styles.batteryIcon, styles.iconPosition]}
-          contentFit="cover"
-          source={require("../assets/battery1.png")}
+    <>
+      <View style={styles.iphoneSe2ndGeneration}>
+        <View
+          style={[styles.iphoneSe2ndGenerationChild, styles.iphonePosition]}
         />
-        <Image
-          style={[styles.timeIcon, styles.iconPosition]}
-          contentFit="cover"
-          source={require("../assets/time1.png")}
+        <View
+          style={[styles.iphoneSe2ndGenerationItem, styles.iphonePosition]}
         />
-        <View style={styles.service}>
+        <View
+          style={[styles.iphoneSe2ndGenerationInner, styles.iphonePosition]}
+        />
+        <Text style={styles.qr}>
+          의약품 또는 약 봉투의 QR코드를 사각형 안에 놓으세요.
+        </Text>
+        <View style={styles.frameView}>
+          <View style={styles.frameChild} />
+        </View>
+        <Text style={styles.ai}>AI 대화로 찾기</Text>
+        <NavigationBarIPadMultit
+          title="이미지 스캔"
+          showBackground={false}
+          showLeading
+          showPrompt={false}
+          showSearch={false}
+          showTrailing
+        />
+        <View style={[styles.iphoneStatusBar, styles.iphonePosition]}>
           <Image
-            style={styles.receptionIcon}
+            style={[styles.batteryIcon, styles.iconPosition]}
             contentFit="cover"
-            source={require("../assets/reception1.png")}
+            source={require("../assets/battery1.png")}
           />
-          <Text style={[styles.provider, styles.providerTypo]}>LG U+</Text>
-          <View style={styles.providerWrapper}>
-            <Text style={styles.providerTypo}>LTE</Text>
+          <Image
+            style={[styles.timeIcon, styles.iconPosition]}
+            contentFit="cover"
+            source={require("../assets/time1.png")}
+          />
+          <View style={styles.service}>
+            <Image
+              style={styles.receptionIcon}
+              contentFit="cover"
+              source={require("../assets/reception1.png")}
+            />
+            <Text style={[styles.provider, styles.providerTypo]}>LG U+</Text>
+            <View style={styles.providerWrapper}>
+              <Text style={styles.providerTypo}>LTE</Text>
+            </View>
           </View>
         </View>
       </View>
-    </View>
+    </>
   );
 };
 
