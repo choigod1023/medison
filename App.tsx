@@ -1,8 +1,10 @@
 import * as React from "react";
+import { useState, useEffect } from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import AppLoading from "expo-app-loading";
 import { useFonts } from "expo-font";
+import * as Font from "expo-font";
 import IPhoneSE2ndGenerationLo from "./screens/IPhoneSE2ndGenerationLo";
 import IPhoneSE2ndGeneration from "./screens/IPhoneSE2ndGeneration";
 import IPhoneSE2ndGeneration2 from "./screens/IPhoneSE2ndGeneration2";
@@ -16,14 +18,20 @@ const Stack = createNativeStackNavigator();
 
 const App = () => {
   const [hideSplashScreen, setHideSplashScreen] = React.useState(true);
-
+  const [fontsLoaded, setFontsLoaded] = useState(false);
   // Load fonts
-  const [fontsLoaded] = useFonts({
-    SFProText: require("./assets/fonts/SF-Pro-Text-Regular.otf"),
-    Pretendard: require("./assets/fonts/Pretendard-Regular.otf"),
-    SFProDisplay: require("./assets/fonts/SF-Pro-Display-Regular.otf"),
-    NanumSquareNeo: require("./assets/fonts/NanumSquareNeoOTF-Rg.otf"),
-  });
+  useEffect(() => {
+    const loadFonts = async () => {
+      await Font.loadAsync({
+        SFProText: require("./assets/fonts/SF-Pro-Text-Regular.otf"),
+        Pretendard: require("./assets/fonts/Pretendard-Regular.otf"),
+        SFProDisplay: require("./assets/fonts/SF-Pro-Display-Regular.otf"),
+        NanumSquareNeo: require("./assets/fonts/NanumSquareNeoOTF-Rg.otf"),
+      });
+      setFontsLoaded(true);
+    };
+    loadFonts();
+  }, []);
 
   if (!fontsLoaded) {
     return <AppLoading />;
