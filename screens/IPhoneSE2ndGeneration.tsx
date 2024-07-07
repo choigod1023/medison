@@ -81,35 +81,35 @@ const IPhoneSE2ndGeneration = () => {
             navigation.navigate("IPhoneSE2ndGeneration3");
           }}
         >
-          3
+          <Text>3</Text>
         </Pressable>
         <Pressable
           onPress={() => {
             navigation.navigate("IPhoneSE2ndGeneration4");
           }}
         >
-          4
+          <Text>4</Text>
         </Pressable>
         <Pressable
           onPress={() => {
             navigation.navigate("IPhoneSE2ndGeneration5");
           }}
         >
-          5
+          <Text>5</Text>
         </Pressable>
         <Pressable
           onPress={() => {
             navigation.navigate("IPhoneSE2ndGeneration6");
           }}
         >
-          6
+          <Text>6</Text>
         </Pressable>
         <Pressable
           onPress={() => {
             navigation.navigate("IPhoneSE2ndGenerationAI");
           }}
         >
-          AI
+          <Text>AI</Text>
         </Pressable>
       </View>
     </>
@@ -205,7 +205,7 @@ const styles = StyleSheet.create({
   },
   directSearch: {
     left: 207,
-    textDecoration: "underline",
+    // textDecoration: "underline",
     fontWeight: "700",
     color: Color.colorRoyalblue_100,
     fontSize: FontSize.size_sm,
