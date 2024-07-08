@@ -60,7 +60,7 @@ const NavigationBarIPadMultit = ({
             style={[styles.leading, styles.leadingSpaceBlock]}
             onPress={() => navigation.navigate("IPhoneSE2ndGeneration")}
           >
-            <Text style={[styles.chevron, styles.labelTypo]}>&lt;</Text>
+            <Text style={[styles.chevron, styles.labelTypo]}>􀆉</Text>
             <Text style={[styles.label, styles.labelTypo]}>이전</Text>
           </Pressable>
         )}
@@ -108,7 +108,7 @@ const styles = StyleSheet.create({
     color: Color.colorsBlue1,
     lineHeight: 22,
     fontSize: FontSize.bodyRegular_size,
-    fontFamily: FontFamily.bodyRegular,
+    fontFamily: "SFProText",
   },
   materialsmodeOptions: {
     height: "100%",
@@ -148,7 +148,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     textAlign: "center",
     color: Color.miscellaneousTextFieldBG,
-    fontFamily: FontFamily.bodyRegular,
+    fontFamily: "SFProText",
     letterSpacing: 0,
     alignItems: "center",
     position: "absolute",
@@ -179,7 +179,7 @@ const styles = StyleSheet.create({
     top: "25%",
     left: "39.12%",
     fontWeight: "700",
-    fontFamily: FontFamily.sFProDisplay,
+    fontFamily: "SFProDisplay",
     lineHeight: 22,
     fontSize: FontSize.bodyRegular_size,
     textAlign: "center",

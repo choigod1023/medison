@@ -49,7 +49,7 @@ const IPhoneSE2ndGenerationAI = () => {
               }}
             >
               <View style={[styles.leading, styles.leadingSpaceBlock]}>
-                <Text style={[styles.chevron, styles.label1Typo]}>&lt;</Text>
+                <Text style={[styles.chevron, styles.label1Typo]}>􀆉</Text>
                 <Text style={styles.label}>이전</Text>
               </View>
             </Pressable>
@@ -98,7 +98,7 @@ const styles = StyleSheet.create({
     fontWeight: "600",
     lineHeight: 22,
     fontSize: FontSize.bodyRegular_size,
-    fontFamily: "SFProText",
+    fontFamily: "SF Pro",
   },
   topRowPosition: {
     right: 6,
