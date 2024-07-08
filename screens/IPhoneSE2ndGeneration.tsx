@@ -81,7 +81,7 @@ const IPhoneSE2ndGeneration = () => {
             navigation.navigate("IPhoneSE2ndGeneration3");
           }}
         >
-          <Text style={{ fontFamily: "NanumSquareNeo" }}>3</Text>
+          <Text style={{ fontFamily: "NanumSquareNeo", marginTop: 10 }}>3</Text>
         </Pressable>
         <Pressable
           onPress={() => {
