@@ -117,7 +117,7 @@ const styles = StyleSheet.create({
   textTypo5: {
     textAlign: "left",
     color: Color.miscellaneousTextFieldBG,
-    fontFamily: FontFamily.sFProText,
+    fontFamily: "SFProText",
     fontWeight: "500",
     lineHeight: 12,
     letterSpacing: -0.1,
@@ -127,7 +127,7 @@ const styles = StyleSheet.create({
     fontSize: FontSize.size_xl,
     color: Color.labelsPrimary,
     textAlign: "center",
-    fontFamily: FontFamily.nanumSquareNeo,
+    fontFamily: "NaumSquareNeo",
   },
   rectangleViewLayout: {
     height: 23,
@@ -152,20 +152,20 @@ const styles = StyleSheet.create({
     fontSize: FontSize.size_15xl,
     color: Color.labelsPrimary,
     textAlign: "center",
-    fontFamily: FontFamily.nanumSquareNeo,
+    fontFamily: "NaumSquareNeo",
     fontWeight: "800",
   },
   textTypo2: {
     fontSize: FontSize.size_3xl,
     color: Color.labelsPrimary,
     textAlign: "center",
-    fontFamily: FontFamily.nanumSquareNeo,
+    fontFamily: "NaumSquareNeo",
     position: "absolute",
   },
   textTypo: {
     fontWeight: "700",
     textAlign: "center",
-    fontFamily: FontFamily.nanumSquareNeo,
+    fontFamily: "NaumSquareNeo",
     position: "absolute",
   },
   text12Position: {
@@ -202,7 +202,7 @@ const styles = StyleSheet.create({
     left: 68,
     fontSize: 36,
     textAlign: "center",
-    fontFamily: FontFamily.nanumSquareNeo,
+    fontFamily: "NaumSquareNeo",
     fontWeight: "800",
     position: "absolute",
   },
@@ -299,7 +299,7 @@ const styles = StyleSheet.create({
     fontSize: FontSize.size_xl,
     color: Color.labelsPrimary,
     textAlign: "center",
-    fontFamily: FontFamily.nanumSquareNeo,
+    fontFamily: "NaumSquareNeo",
   },
   rectangleView: {
     left: 275,
@@ -322,7 +322,7 @@ const styles = StyleSheet.create({
     fontSize: FontSize.size_15xl,
     color: Color.labelsPrimary,
     textAlign: "center",
-    fontFamily: FontFamily.nanumSquareNeo,
+    fontFamily: "NaumSquareNeo",
     fontWeight: "800",
   },
   text15: {

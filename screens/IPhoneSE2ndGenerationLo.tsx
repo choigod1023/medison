@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
   },
   providerTypo: {
     textAlign: "left",
-    fontFamily: FontFamily.sFProText,
+    fontFamily: "SFProText",
     fontWeight: "500",
     lineHeight: 12,
     letterSpacing: -0.1,
@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
   poweredBy: {
     left: "33%",
     fontSize: FontSize.size_sm,
-    fontFamily: FontFamily.sFProDisplay,
+    fontFamily: "SFProDisplay",
     textAlign: "center",
     color: Color.miscellaneousTextFieldBG,
     top: "89.9%",

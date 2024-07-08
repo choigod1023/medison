@@ -81,7 +81,7 @@ const IPhoneSE2ndGeneration = () => {
             navigation.navigate("IPhoneSE2ndGeneration3");
           }}
         >
-          <Text>3</Text>
+          <Text style={{ fontFamily: "NanumSquareNeo" }}>3</Text>
         </Pressable>
         <Pressable
           onPress={() => {
@@ -149,7 +149,7 @@ const styles = StyleSheet.create({
     fontWeight: "800",
     color: Color.labelsPrimary,
     textAlign: "center",
-    fontFamily: FontFamily.nanumSquareNeo,
+    fontFamily: "NaumSquareNeo",
     position: "absolute",
   },
   accountPic: {
@@ -200,7 +200,7 @@ const styles = StyleSheet.create({
     fontSize: FontSize.size_sm,
     top: 572,
     color: Color.labelsPrimary,
-    fontFamily: FontFamily.nanumSquareNeo,
+    fontFamily: "NaumSquareNeo",
     position: "absolute",
   },
   directSearch: {
@@ -211,7 +211,7 @@ const styles = StyleSheet.create({
     fontSize: FontSize.size_sm,
     top: 572,
     textAlign: "center",
-    fontFamily: FontFamily.nanumSquareNeo,
+    fontFamily: "NaumSquareNeo",
     position: "absolute",
   },
   userMode: {
@@ -220,7 +220,7 @@ const styles = StyleSheet.create({
     fontSize: FontSize.size_3xs,
     color: Color.colorDimgray_100,
     textAlign: "center",
-    fontFamily: FontFamily.nanumSquareNeo,
+    fontFamily: "NaumSquareNeo",
     position: "absolute",
   },
 });

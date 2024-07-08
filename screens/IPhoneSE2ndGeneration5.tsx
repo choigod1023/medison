@@ -138,7 +138,7 @@ const styles = StyleSheet.create({
   },
   providerTypo: {
     textAlign: "left",
-    fontFamily: FontFamily.sFProText,
+    fontFamily: "SFProText",
     fontWeight: "500",
     lineHeight: 12,
     letterSpacing: -0.1,
@@ -148,12 +148,12 @@ const styles = StyleSheet.create({
   textTypo4: {
     color: Color.labelsPrimary,
     textAlign: "center",
-    fontFamily: FontFamily.nanumSquareNeo,
+    fontFamily: "NaumSquareNeo",
     position: "absolute",
   },
   textTypo2: {
     fontWeight: "700",
-    fontFamily: FontFamily.nanumSquareNeo,
+    fontFamily: "NaumSquareNeo",
   },
   iconPosition: {
     left: 21,
@@ -177,7 +177,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     display: "flex",
     fontWeight: "700",
-    fontFamily: FontFamily.nanumSquareNeo,
+    fontFamily: "NaumSquareNeo",
     alignItems: "center",
   },
   text12Position: {
@@ -315,7 +315,7 @@ const styles = StyleSheet.create({
   text4: {
     top: 279,
     fontWeight: "700",
-    fontFamily: FontFamily.nanumSquareNeo,
+    fontFamily: "NaumSquareNeo",
     left: 45,
     lineHeight: 18,
     fontSize: FontSize.footnoteRegular_size,
@@ -355,7 +355,7 @@ const styles = StyleSheet.create({
   text7: {
     top: 508,
     fontWeight: "700",
-    fontFamily: FontFamily.nanumSquareNeo,
+    fontFamily: "NaumSquareNeo",
     left: 45,
     lineHeight: 18,
     fontSize: FontSize.footnoteRegular_size,
@@ -376,7 +376,7 @@ const styles = StyleSheet.create({
     top: 366,
   },
   text10: {
-    fontFamily: FontFamily.nanumSquareNeo,
+    fontFamily: "NaumSquareNeo",
   },
   text9: {
     top: 392,
@@ -395,7 +395,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     display: "flex",
     fontWeight: "700",
-    fontFamily: FontFamily.nanumSquareNeo,
+    fontFamily: "NaumSquareNeo",
     alignItems: "center",
     lineHeight: 16,
     fontSize: FontSize.size_smi_5,
@@ -433,13 +433,13 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     display: "flex",
     fontWeight: "700",
-    fontFamily: FontFamily.nanumSquareNeo,
+    fontFamily: "NaumSquareNeo",
     alignItems: "center",
   },
   text14: {
     top: 202,
     left: 219,
-    fontFamily: FontFamily.bodyRegular,
+    fontFamily: "SFProText",
   },
   text15: {
     width: 130,
@@ -450,7 +450,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     display: "flex",
     fontWeight: "700",
-    fontFamily: FontFamily.nanumSquareNeo,
+    fontFamily: "NaumSquareNeo",
     alignItems: "center",
     lineHeight: 18,
     fontSize: FontSize.footnoteRegular_size,
@@ -464,7 +464,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     display: "flex",
     fontWeight: "700",
-    fontFamily: FontFamily.nanumSquareNeo,
+    fontFamily: "NaumSquareNeo",
     alignItems: "center",
     lineHeight: 18,
     fontSize: FontSize.footnoteRegular_size,
