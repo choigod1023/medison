@@ -190,7 +190,7 @@ const styles = StyleSheet.create({
   },
   textLayout: {
     height: 32,
-    top: 593,
+    top: 599,
   },
   iphoneChildPosition: {
     left: 200,
@@ -337,7 +337,7 @@ const styles = StyleSheet.create({
     color: Color.miscellaneousTextFieldBG,
     height: 19,
     width: 293,
-    top: 324,
+    top: 319,
     left: 45,
     position: "absolute",
   },
@@ -445,7 +445,7 @@ const styles = StyleSheet.create({
   text15: {
     width: 130,
     height: 32,
-    top: 598,
+    top: 599,
     left: 45,
     position: "absolute",
     justifyContent: "center",
@@ -460,7 +460,7 @@ const styles = StyleSheet.create({
   },
   text16: {
     height: 32,
-    top: 598,
+    top: 599,
     left: 200,
     justifyContent: "center",
     display: "flex",
