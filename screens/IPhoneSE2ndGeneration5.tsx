@@ -315,6 +315,7 @@ const styles = StyleSheet.create({
   },
   text4: {
     top: 279,
+    paddingRight: 30,
     fontWeight: "700",
     fontFamily: "NaumSquareNeo",
     left: 45,
