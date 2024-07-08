@@ -41,91 +41,64 @@ const IPhoneSE2ndGeneration6 = () => {
           contentFit="cover"
           source={require("../assets/menu-1.png")}
         />
-        <View style={[styles.iphoneStatusBar, styles.iphonePosition]}>
+      </View>
+      <Text style={[styles.text, styles.textClr]}>쇼핑하기</Text>
+      <Text style={[styles.text1, styles.textTypo1]}>나의 맞춤 약</Text>
+      <Text style={[styles.text2, styles.textTypo1]}>오늘의 메디슨 뉴스</Text>
+      <View style={[styles.iphoneSe2ndGenerationItem, styles.iphoneLayout]} />
+      <View style={[styles.iphoneSe2ndGenerationInner, styles.iphoneLayout]} />
+      <Text style={[styles.text3, styles.textClr]}>7월 5일에 검색함</Text>
+      <Text style={[styles.text4, styles.textTypo]}>타이레놀</Text>
+      <View style={styles.rectangleView} />
+      <Text style={styles.text5}>7월 5일에 검색함</Text>
+      <Text style={[styles.text6, styles.textTypo]}>지르텍</Text>
+      <View style={[styles.navigationBarIpadMultit, styles.chromeFlexBox]}>
+        <View style={[styles.materials, styles.iphonePosition]}>
+          <View style={[styles.chrome, styles.chromeFlexBox]} />
+        </View>
+        <View style={[styles.windowGrabber, styles.leadingSpaceBlock]}>
           <Image
-            style={[styles.batteryIcon, styles.iconPosition]}
+            style={styles.dotIconLayout}
             contentFit="cover"
-            source={require("../assets/battery1.png")}
+            source={require("../assets/dot.png")}
           />
           <Image
-            style={[styles.timeIcon, styles.iconPosition]}
+            style={[styles.dotIcon1, styles.dotIconLayout]}
             contentFit="cover"
-            source={require("../assets/time2.png")}
+            source={require("../assets/dot.png")}
           />
-          <View style={[styles.service, styles.chromeFlexBox]}>
-            <Image
-              style={styles.receptionIcon}
-              contentFit="cover"
-              source={require("../assets/reception1.png")}
-            />
-            <Text style={[styles.provider, styles.providerTypo]}>LG U+</Text>
-            <View style={styles.providerWrapper}>
-              <Text style={[styles.provider1, styles.providerTypo]}>LTE</Text>
+          <Image
+            style={[styles.dotIcon1, styles.dotIconLayout]}
+            contentFit="cover"
+            source={require("../assets/dot.png")}
+          />
+        </View>
+        <View style={styles.prompt}>
+          <Text style={styles.prompt1}>This is a prompt message.</Text>
+        </View>
+        <View style={styles.titleAndControls}>
+          <View style={[styles.leading, styles.leadingFlexBox]}>
+            <Text style={[styles.chevron, styles.labelTypo]}>􀆉</Text>
+            <Text style={[styles.label, styles.labelTypo]}>Label</Text>
+          </View>
+          <Text style={[styles.title, styles.titleTypo]}>Title</Text>
+          <View style={[styles.trailing, styles.chromeFlexBox]}>
+            <View style={styles.trailingButton1}>
+              <Text style={[styles.text7, styles.labelTypo]}>􀓔</Text>
             </View>
           </View>
         </View>
-        <Text style={[styles.text, styles.textClr]}>쇼핑하기</Text>
-        <Text style={[styles.text1, styles.textTypo1]}>나의 맞춤 약</Text>
-        <Text style={[styles.text2, styles.textTypo1]}>오늘의 메디슨 뉴스</Text>
-        <View style={[styles.iphoneSe2ndGenerationItem, styles.iphoneLayout]} />
-        <View
-          style={[styles.iphoneSe2ndGenerationInner, styles.iphoneLayout]}
-        />
-        <Text style={[styles.text3, styles.textClr]}>7월 5일에 검색함</Text>
-        <Text style={[styles.text4, styles.textTypo]}>타이레놀</Text>
-        <View style={styles.rectangleView} />
-        <Text style={styles.text5}>7월 5일에 검색함</Text>
-        <Text style={[styles.text6, styles.textTypo]}>지르텍</Text>
-        <View style={[styles.navigationBarIpadMultit, styles.chromeFlexBox]}>
-          <View style={[styles.materials, styles.iphonePosition]}>
-            <View style={[styles.chrome, styles.chromeFlexBox]} />
-          </View>
-          <View style={[styles.windowGrabber, styles.leadingSpaceBlock]}>
-            <Image
-              style={styles.dotIconLayout}
-              contentFit="cover"
-              source={require("../assets/dot.png")}
-            />
-            <Image
-              style={[styles.dotIcon1, styles.dotIconLayout]}
-              contentFit="cover"
-              source={require("../assets/dot.png")}
-            />
-            <Image
-              style={[styles.dotIcon1, styles.dotIconLayout]}
-              contentFit="cover"
-              source={require("../assets/dot.png")}
-            />
-          </View>
-          <View style={styles.prompt}>
-            <Text style={styles.prompt1}>This is a prompt message.</Text>
-          </View>
-          <View style={styles.titleAndControls}>
-            <View style={[styles.leading, styles.leadingFlexBox]}>
-              <Text style={[styles.chevron, styles.labelTypo]}>􀆉</Text>
-              <Text style={[styles.label, styles.labelTypo]}>Label</Text>
-            </View>
-            <Text style={[styles.title, styles.titleTypo]}>Title</Text>
-            <View style={[styles.trailing, styles.chromeFlexBox]}>
-              <View style={styles.trailingButton1}>
-                <Text style={[styles.text7, styles.labelTypo]}>􀓔</Text>
-              </View>
-            </View>
-          </View>
-          <View style={styles.searchField}>
-            <View style={[styles.searchField1, styles.leadingFlexBox]}>
-              <Text
-                style={[styles.searchGlyph, styles.dictationTypo]}
-              >{`􀊫`}</Text>
-              <TextInput
-                style={[styles.placeholderLabel, styles.dictationTypo]}
-                numberOfLines={1}
-                placeholder="검색하기"
-              ></TextInput>
-              <Text
-                style={[styles.dictation, styles.dictationTypo]}
-              >{`􀊱`}</Text>
-            </View>
+        <View style={styles.searchField}>
+          <View style={[styles.searchField1, styles.leadingFlexBox]}>
+            <Text
+              style={[styles.searchGlyph, styles.dictationTypo]}
+            >{`􀊫`}</Text>
+            <TextInput
+              style={[styles.placeholderLabel, styles.dictationTypo]}
+              numberOfLines={1}
+              placeholder="검색하기"
+            ></TextInput>
+            <Text style={[styles.dictation, styles.dictationTypo]}>{`􀊱`}</Text>
           </View>
         </View>
       </View>
