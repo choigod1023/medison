@@ -183,7 +183,7 @@ const styles = StyleSheet.create({
   },
   text12Position: {
     width: 150,
-    top: 432,
+    top: 437,
     height: 19,
     left: 45,
     position: "absolute",
@@ -337,7 +337,7 @@ const styles = StyleSheet.create({
     color: Color.miscellaneousTextFieldBG,
     height: 19,
     width: 293,
-    top: 319,
+    top: 324,
     left: 45,
     position: "absolute",
   },
@@ -429,7 +429,7 @@ const styles = StyleSheet.create({
   text13: {
     left: 225,
     width: 105,
-    top: 198,
+    top: 205,
     height: 32,
     justifyContent: "center",
     display: "flex",
@@ -445,7 +445,7 @@ const styles = StyleSheet.create({
   text15: {
     width: 130,
     height: 32,
-    top: 593,
+    top: 598,
     left: 45,
     position: "absolute",
     justifyContent: "center",
@@ -460,7 +460,7 @@ const styles = StyleSheet.create({
   },
   text16: {
     height: 32,
-    top: 593,
+    top: 598,
     left: 200,
     justifyContent: "center",
     display: "flex",
