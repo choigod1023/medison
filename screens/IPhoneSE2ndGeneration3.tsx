@@ -246,7 +246,7 @@ const styles = StyleSheet.create({
     fontWeight: "600",
     lineHeight: 22,
     fontSize: FontSize.bodyRegular_size,
-    fontFamily: "SF Pro",
+    fontFamily: "SFProText",
   },
   topRowPosition: {
     right: 6,
