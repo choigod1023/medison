@@ -163,7 +163,7 @@ const styles = StyleSheet.create({
   },
   textLayout2: {
     lineHeight: 18,
-    marginRight: 40,
+    marginRight: 0,
     paddingRight: 20,
     fontSize: FontSize.footnoteRegular_size,
   },
@@ -183,14 +183,14 @@ const styles = StyleSheet.create({
   },
   text12Position: {
     width: 150,
-    top: 437,
+    top: 432,
     height: 19,
     left: 45,
     position: "absolute",
   },
   textLayout: {
     height: 32,
-    top: 599,
+    top: 593,
   },
   iphoneChildPosition: {
     left: 200,
@@ -429,7 +429,7 @@ const styles = StyleSheet.create({
   text13: {
     left: 225,
     width: 105,
-    top: 205,
+    top: 198,
     height: 32,
     justifyContent: "center",
     display: "flex",
@@ -445,7 +445,8 @@ const styles = StyleSheet.create({
   text15: {
     width: 130,
     height: 32,
-    top: 599,
+    paddingTop: 20,
+    top: 593,
     left: 45,
     position: "absolute",
     justifyContent: "center",
@@ -460,7 +461,8 @@ const styles = StyleSheet.create({
   },
   text16: {
     height: 32,
-    top: 599,
+    top: 593,
+    paddingTop: 20,
     left: 200,
     justifyContent: "center",
     display: "flex",
