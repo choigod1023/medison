@@ -445,7 +445,7 @@ const styles = StyleSheet.create({
   text15: {
     width: 130,
     height: 32,
-    paddingTop: 5,
+    paddingTop: 7,
     top: 593,
     left: 45,
     position: "absolute",
@@ -462,7 +462,7 @@ const styles = StyleSheet.create({
   text16: {
     height: 32,
     top: 593,
-    paddingTop: 5,
+    paddingTop: 7,
     left: 200,
     justifyContent: "center",
     display: "flex",
