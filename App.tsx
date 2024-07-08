@@ -23,6 +23,7 @@ const App = () => {
     Pretendard: require("./assets/fonts/Pretendard-Regular.otf"),
     SFProDisplay: require("./assets/fonts/SF-Pro-Display-Regular.otf"),
     NanumSquareNeo: require("./assets/fonts/NanumSquareNeoOTF-Rg.otf"),
+    SFPro: require("./assets/fonts/SF-Pro-Display-Regular.otf"),
   });
 
   if (!fontsLoaded) {
