@@ -163,7 +163,7 @@ const styles = StyleSheet.create({
   },
   textLayout2: {
     lineHeight: 18,
-    marginRight: 20,
+    marginRight: 30,
     fontSize: FontSize.footnoteRegular_size,
   },
   text5Position: {
