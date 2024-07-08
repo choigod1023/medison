@@ -41,29 +41,7 @@ const IPhoneSE2ndGeneration4 = () => {
           contentFit="cover"
           source={require("../assets/menu-1.png")}
         />
-        <View style={[styles.iphoneStatusBar, styles.iphonePosition]}>
-          <Image
-            style={[styles.batteryIcon, styles.iconPosition]}
-            contentFit="cover"
-            source={require("../assets/battery1.png")}
-          />
-          <Image
-            style={[styles.timeIcon, styles.iconPosition]}
-            contentFit="cover"
-            source={require("../assets/time1.png")}
-          />
-          <View style={styles.service}>
-            <Image
-              style={styles.receptionIcon}
-              contentFit="cover"
-              source={require("../assets/reception1.png")}
-            />
-            <Text style={[styles.provider, styles.textTypo5]}>LG U+</Text>
-            <View style={styles.providerWrapper}>
-              <Text style={styles.textTypo5}>LTE</Text>
-            </View>
-          </View>
-        </View>
+
         <Text style={[styles.text5, styles.textTypo4]}>진통제</Text>
         <View
           style={[styles.iphoneSe2ndGenerationItem, styles.rectangleViewLayout]}

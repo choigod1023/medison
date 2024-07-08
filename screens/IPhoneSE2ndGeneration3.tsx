@@ -70,29 +70,7 @@ const IPhoneSE2ndGeneration3 = () => {
             />
           </View>
         </View>
-        <View style={[styles.iphoneStatusBar, styles.iphonePosition]}>
-          <Image
-            style={[styles.batteryIcon, styles.topRowPosition]}
-            contentFit="cover"
-            source={require("../assets/battery1.png")}
-          />
-          <Image
-            style={styles.timeIcon}
-            contentFit="cover"
-            source={require("../assets/time1.png")}
-          />
-          <View style={[styles.service, styles.leadingFlexBox]}>
-            <Image
-              style={styles.receptionIcon}
-              contentFit="cover"
-              source={require("../assets/reception1.png")}
-            />
-            <Text style={[styles.provider, styles.providerTypo]}>LG U+</Text>
-            <View style={styles.providerWrapper}>
-              <Text style={[styles.provider1, styles.providerTypo]}>LTE</Text>
-            </View>
-          </View>
-        </View>
+
         <View style={styles.keyboardsIphone}>
           <View style={styles.iphoneAlphabetQwerty}>
             <View style={styles.bottomRow}>
