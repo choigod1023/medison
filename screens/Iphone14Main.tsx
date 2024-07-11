@@ -1,9 +1,13 @@
 import * as React from "react";
-import { Text, StyleSheet, View } from "react-native";
+import { Text, StyleSheet, View, Pressable } from "react-native";
 import { Image } from "expo-image";
 import { FontFamily, Color, FontSize, Border } from "../GlobalStyles";
+import { useNavigation, ParamListBase } from "@react-navigation/native";
+import { StackNavigationProp } from "@react-navigation/stack";
 
 const IPhone1415ProMax = () => {
+  const navigation = useNavigation<StackNavigationProp<ParamListBase>>();
+
   return (
     <View style={styles.iphone1415ProMax}>
       <Text style={[styles.text, styles.textTypo]}>빠른 찾기</Text>
@@ -29,16 +33,22 @@ const IPhone1415ProMax = () => {
       <Text style={styles.text1}>{`이름을 알고있다면? `}</Text>
       <Text style={styles.text2}>직접 검색하기</Text>
       <Text style={[styles.text3, styles.textTypo]}>일반 사용자 모드</Text>
+      <Pressable
+        onPress={() => {
+          navigation.navigate("IPhoneSE2ndGeneration2");
+        }}
+      >
+        <View style={[styles.rectangleParent, styles.groupPosition]}>
+          <View style={[styles.groupChild, styles.groupPosition]} />
+          <Image
+            style={[styles.qrcode1Icon, styles.iconPosition]}
+            contentFit="cover"
+            source={require("../assets/qrcode-1.png")}
+          />
+          <Text style={[styles.qr, styles.qrTypo]}>QR코드로 찾기</Text>
+        </View>
+      </Pressable>
 
-      <View style={[styles.rectangleParent, styles.groupPosition]}>
-        <View style={[styles.groupChild, styles.groupPosition]} />
-        <Image
-          style={[styles.qrcode1Icon, styles.iconPosition]}
-          contentFit="cover"
-          source={require("../assets/qrcode-1.png")}
-        />
-        <Text style={[styles.qr, styles.qrTypo]}>QR코드로 찾기</Text>
-      </View>
       <View style={[styles.rectangleGroup, styles.groupPosition]}>
         <View style={[styles.groupChild, styles.groupPosition]} />
         <Image

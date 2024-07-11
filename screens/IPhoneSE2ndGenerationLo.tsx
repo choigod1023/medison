@@ -15,7 +15,7 @@ const IPhoneSE2ndGenerationLo = () => {
         <Pressable
           style={styles.tapScreenToContainer}
           onPress={() => {
-            navigation.navigate("IPhone14Main");
+            navigation.navigate("IPhoneSE2ndGeneration");
           }}
         >
           <Image
