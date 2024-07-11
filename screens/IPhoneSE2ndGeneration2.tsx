@@ -32,29 +32,6 @@ const IPhoneSE2ndGeneration2 = () => {
           showSearch={false}
           showTrailing
         />
-        <View style={[styles.iphoneStatusBar, styles.iphonePosition]}>
-          <Image
-            style={[styles.batteryIcon, styles.iconPosition]}
-            contentFit="cover"
-            source={require("../assets/battery1.png")}
-          />
-          <Image
-            style={[styles.timeIcon, styles.iconPosition]}
-            contentFit="cover"
-            source={require("../assets/time1.png")}
-          />
-          <View style={styles.service}>
-            <Image
-              style={styles.receptionIcon}
-              contentFit="cover"
-              source={require("../assets/reception1.png")}
-            />
-            <Text style={[styles.provider, styles.providerTypo]}>LG U+</Text>
-            <View style={styles.providerWrapper}>
-              <Text style={styles.providerTypo}>LTE</Text>
-            </View>
-          </View>
-        </View>
       </View>
     </>
   );
