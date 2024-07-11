@@ -11,6 +11,7 @@ import IPhoneSE2ndGeneration3 from "./screens/IPhoneSE2ndGeneration3";
 import IPhoneSE2ndGeneration4 from "./screens/IPhoneSE2ndGeneration4";
 import IPhoneSE2ndGeneration5 from "./screens/IPhoneSE2ndGeneration5";
 import IPhoneSE2ndGeneration6 from "./screens/IPhoneSE2ndGeneration6";
+import IPhone14Main from "./screens/Iphone14Main";
 
 const Stack = createNativeStackNavigator();
 
@@ -20,9 +21,9 @@ const App = () => {
   // Load fonts
   const [fontsLoaded] = useFonts({
     SFProText: require("./assets/fonts/SF-Pro-Text-Regular.otf"),
-    Pretendard: require("./assets/fonts/Pretendard-Regular.otf"),
+    Pretendard: require("./assets/fonts/Pretendard-Regular.ttf"),
     SFProDisplay: require("./assets/fonts/SF-Pro-Display-Regular.otf"),
-    NanumSquareNeo: require("./assets/fonts/NanumSquareNeoOTF-Rg.otf"),
+    NanumSquareNeo: require("./assets/fonts/NanumSquareNeo-bRg.ttf"),
     SFPro: require("./assets/fonts/SF-Pro-Display-Regular.otf"),
   });
 
@@ -35,6 +36,11 @@ const App = () => {
       <NavigationContainer>
         {hideSplashScreen ? (
           <Stack.Navigator screenOptions={{ headerShown: false }}>
+            <Stack.Screen
+              name="IPhone14Main"
+              component={IPhone14Main}
+              options={{ headerShown: false }}
+            />
             <Stack.Screen
               name="IPhoneSE2ndGenerationLo"
               component={IPhoneSE2ndGenerationLo}

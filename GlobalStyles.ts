@@ -16,6 +16,7 @@ export const FontSize = {
   size_3xs: 10,
   size_23xl: 42,
   bodyRegular_size: 15,
+  size_9xl: 28,
 
   headlineRegular_size: 12,
   footnoteRegular_size: 12,
@@ -78,4 +79,7 @@ export const Border = {
   br_4xl: 23,
   br_14xl: 33,
   br_2xl: 21,
+  br_lg: 18,
+  br_8xs_3: 4,
+  br_10xs_5: 3,
 };
