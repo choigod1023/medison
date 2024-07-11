@@ -1,10 +1,14 @@
 import * as React from "react";
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, View, Text, Pressable } from "react-native";
 import { Image } from "expo-image";
 import NavigationBarIPadMultit from "../components/NavigationBarIPadMultit";
 import { FontFamily, FontSize, Color, Padding } from "../GlobalStyles";
 
+import { useNavigation, ParamListBase } from "@react-navigation/native";
+import { StackNavigationProp } from "@react-navigation/stack";
 const IPhoneSE2ndGeneration2 = () => {
+  const navigation = useNavigation<StackNavigationProp<ParamListBase>>();
+
   return (
     <>
       <View style={styles.iphoneSe2ndGeneration}>
@@ -23,7 +27,13 @@ const IPhoneSE2ndGeneration2 = () => {
         <View style={styles.frameView}>
           <View style={styles.frameChild} />
         </View>
-        <Text style={styles.ai}>AI 대화로 찾기</Text>
+        <Pressable
+          onPress={() => {
+            navigation.navigate("IPhoneSE2ndGenerationAI");
+          }}
+        >
+          <Text style={styles.ai}>AI 대화로 찾기</Text>
+        </Pressable>
         <NavigationBarIPadMultit
           title="이미지 스캔"
           showBackground={false}
@@ -105,7 +115,7 @@ const styles = StyleSheet.create({
   },
   ai: {
     top: 576,
-    left: 130,
+    left: 135,
     fontSize: FontSize.size_lg,
     lineHeight: 27,
     fontWeight: "500",

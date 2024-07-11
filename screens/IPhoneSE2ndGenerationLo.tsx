@@ -8,14 +8,19 @@ import { FontFamily, FontSize, Color, Padding } from "../GlobalStyles";
 
 const IPhoneSE2ndGenerationLo = () => {
   const navigation = useNavigation<StackNavigationProp<ParamListBase>>();
-
+  React.useEffect(() => {
+    const timer = setTimeout(() => {
+      navigation.navigate("IPhoneSE2ndGeneration");
+    }, 1000);
+    return () => clearTimeout(timer); // Cleanup the timer if the component unmounts
+  }, []);
   return (
     <>
       <View style={styles.iphoneSe2ndGenerationLo}>
         <Pressable
           style={styles.tapScreenToContainer}
           onPress={() => {
-            navigation.navigate("IPhoneSE2ndGeneration");
+            navigation.navigate("IPhoneSE2ndGenerationLo");
           }}
         >
           <Image

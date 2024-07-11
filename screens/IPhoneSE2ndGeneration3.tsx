@@ -1,19 +1,48 @@
 import * as React from "react";
-import { StyleSheet, View, Text, Pressable } from "react-native";
+import { useState } from "react";
+import {
+  StyleSheet,
+  View,
+  Text,
+  Pressable,
+  TextInput,
+  ScrollView,
+} from "react-native";
 import { Image } from "expo-image";
 import StatePlaceholder from "../components/StatePlaceholder";
 import { Padding, Color, FontSize, FontFamily, Border } from "../GlobalStyles";
 import { StackNavigationProp } from "@react-navigation/stack";
-
 import { useNavigation, ParamListBase } from "@react-navigation/native";
-const IPhoneSE2ndGeneration3 = () => {
+
+interface Message {
+  text: string;
+  type: "sent" | "received";
+}
+
+const IPhoneSE2ndGenerationAI = () => {
   const navigation = useNavigation<StackNavigationProp<ParamListBase>>();
+  const [message, setMessage] = useState("");
+  const [messages, setMessages] = useState<Message[]>([]);
+
+  const handleSendMessage = () => {
+    if (message.trim()) {
+      setMessages([...messages, { text: message, type: "sent" }]);
+      setMessage("");
+      // Simulate a reply after a short delay
+      setTimeout(() => {
+        setMessages((prevMessages) => [
+          ...prevMessages,
+          { text: "자동 응답 메시지입니다.", type: "received" },
+        ]);
+      }, 1000);
+    }
+  };
 
   return (
     <>
-      <View style={styles.iphoneSe2ndGeneration}>
+      <View style={styles.iphoneSe2ndGenerationAi}>
         <View
-          style={[styles.iphoneSe2ndGenerationChild, styles.iphonePosition]}
+          style={[styles.iphoneSe2ndGenerationAiChild, styles.iphonePosition]}
         />
         <View style={[styles.navigationBarIpadMultit, styles.leadingFlexBox]}>
           <View style={styles.materials}>
@@ -43,7 +72,9 @@ const IPhoneSE2ndGeneration3 = () => {
           </View>
           <View style={styles.titleAndControls}>
             <Pressable
-              onPress={() => navigation.navigate("IPhoneSE2ndGeneration")}
+              onPress={() => {
+                navigation.navigate("IPhoneSE2ndGeneration");
+              }}
             >
               <View style={[styles.leading, styles.leadingSpaceBlock]}>
                 <Text style={[styles.chevron, styles.label1Typo]}>􀆉</Text>
@@ -52,13 +83,9 @@ const IPhoneSE2ndGeneration3 = () => {
             </Pressable>
             <Text style={styles.title}>전문가와 대화하기</Text>
             <View style={[styles.trailing, styles.leadingFlexBox]}>
-              <Pressable
-                onPress={() => navigation.navigate("IPhoneSE2ndGeneration")}
-              >
-                <View style={styles.trailingButton1}>
-                  <Text style={[styles.label1, styles.label1Typo]}>확인</Text>
-                </View>
-              </Pressable>
+              <View style={styles.trailingButton1}>
+                <Text style={[styles.label1, styles.label1Typo]}>확인</Text>
+              </View>
             </View>
           </View>
           <View style={styles.searchField}>
@@ -70,131 +97,33 @@ const IPhoneSE2ndGeneration3 = () => {
             />
           </View>
         </View>
-
-        <View style={styles.keyboardsIphone}>
-          <View style={styles.iphoneAlphabetQwerty}>
-            <View style={styles.bottomRow}>
-              <View style={[styles.keysLetter, styles.keysShadowBox7]}>
-                <Text style={styles.letter}>ㅋ</Text>
-              </View>
-              <View style={[styles.keysLetter1, styles.keysShadowBox6]}>
-                <Text style={styles.letter}>ㅌ</Text>
-              </View>
-              <View style={[styles.keysLetter2, styles.keysShadowBox5]}>
-                <Text style={styles.letter}>ㅊ</Text>
-              </View>
-              <View style={[styles.keysLetter3, styles.keysShadowBox4]}>
-                <Text style={styles.letter}>ㅍ</Text>
-              </View>
-              <View style={[styles.keysLetter4, styles.keysShadowBox3]}>
-                <Text style={styles.letter}>ㅠ</Text>
-              </View>
-              <View style={[styles.keysLetter5, styles.keysShadowBox2]}>
-                <Text style={styles.letter}>ㅜ</Text>
-              </View>
-              <View style={[styles.keysLetter6, styles.keysShadowBox1]}>
-                <Text style={styles.letter}>ㅡ</Text>
-              </View>
+        <ScrollView style={styles.messagesContainer}>
+          {messages.map((msg, index) => (
+            <View
+              key={index}
+              style={[
+                styles.messageBubble,
+                msg.type === "sent"
+                  ? styles.sentMessage
+                  : styles.receivedMessage,
+              ]}
+            >
+              <Text style={styles.messageText}>{msg.text}</Text>
             </View>
-            <View style={styles.middleRow}>
-              <View style={[styles.keysLetter7, styles.keysShadowBox7]}>
-                <Text style={styles.letter}>ㅁ</Text>
-              </View>
-              <View style={[styles.keysLetter8, styles.keysShadowBox6]}>
-                <Text style={styles.letter}>ㄴ</Text>
-              </View>
-              <View style={[styles.keysLetter9, styles.keysShadowBox5]}>
-                <Text style={styles.letter}>ㅇ</Text>
-              </View>
-              <View style={[styles.keysLetter10, styles.keysShadowBox4]}>
-                <Text style={styles.letter}>ㄹ</Text>
-              </View>
-              <View style={[styles.keysLetter11, styles.keysShadowBox3]}>
-                <Text style={styles.letter}>ㅎ</Text>
-              </View>
-              <View style={[styles.keysLetter12, styles.keysShadowBox2]}>
-                <Text style={styles.letter}>ㅗ</Text>
-              </View>
-              <View style={[styles.keysLetter13, styles.keysShadowBox1]}>
-                <Text style={styles.letter}>ㅓ</Text>
-              </View>
-              <View style={[styles.keysLetter14, styles.keysShadowBox7]}>
-                <Text style={styles.letter}>ㅏ</Text>
-              </View>
-              <View style={[styles.keysLetter15, styles.keysShadowBox7]}>
-                <Text style={styles.letter}>ㅣ</Text>
-              </View>
-            </View>
-            <View style={[styles.topRow, styles.topRowPosition]}>
-              <View style={[styles.keysLetter16, styles.keysShadowBox7]}>
-                <Text style={[styles.letter16, styles.letterTypo1]}>ㅂ</Text>
-              </View>
-              <View style={[styles.keysLetter17, styles.keysShadowBox7]}>
-                <Text style={[styles.letter17, styles.letterTypo1]}>ㅈ</Text>
-              </View>
-              <View style={[styles.keysLetter18, styles.keysShadowBox7]}>
-                <Text style={[styles.letter18, styles.letterTypo1]}>ㄷ</Text>
-              </View>
-              <View style={[styles.keysLetter19, styles.keysShadowBox7]}>
-                <Text style={[styles.letter18, styles.letterTypo1]}>ㄱ</Text>
-              </View>
-              <View style={[styles.keysLetter20, styles.keysShadowBox7]}>
-                <Text style={[styles.letter18, styles.letterTypo1]}>ㅅ</Text>
-              </View>
-              <View style={[styles.keysLetter21, styles.keysShadowBox7]}>
-                <Text style={[styles.letter18, styles.letterTypo1]}>ㅛ</Text>
-              </View>
-              <View style={[styles.keysLetter22, styles.keysShadowBox7]}>
-                <Text style={[styles.letter18, styles.letterTypo1]}>ㅕ</Text>
-              </View>
-              <View style={[styles.keysLetter23, styles.keysShadowBox7]}>
-                <Text style={[styles.letter18, styles.letterTypo1]}>ㅑ</Text>
-              </View>
-              <View style={[styles.keysLetter24, styles.keysShadowBox7]}>
-                <Text style={[styles.letter18, styles.letterTypo1]}>ㅐ</Text>
-              </View>
-              <View style={[styles.keysLetter25, styles.keysShadowBox7]}>
-                <Text style={[styles.letter18, styles.letterTypo1]}>ㅔ</Text>
-              </View>
-            </View>
-            <Image
-              style={[styles.keysIcon, styles.keysIconLayout]}
-              contentFit="cover"
-              source={require("../assets/-keys--icon.png")}
-            />
-            <Image
-              style={[styles.keysIcon1, styles.keysIconLayout]}
-              contentFit="cover"
-              source={require("../assets/-keys--icon1.png")}
-            />
-          </View>
-          <View style={styles.iphoneControllerPortrait}>
-            <View style={[styles.keysLabelParent, styles.keysPosition]}>
-              <View style={[styles.keysLabel, styles.keysShadowBox]}>
-                <Text style={[styles.letter26, styles.letterTypo]}>123</Text>
-              </View>
-              <Image
-                style={[styles.keysIcon2, styles.iconLayout]}
-                contentFit="cover"
-                source={require("../assets/-keys--icon2.png")}
-              />
-              <Image
-                style={[styles.emojiIcon, styles.iconLayout]}
-                contentFit="cover"
-                source={require("../assets/emoji.png")}
-              />
-            </View>
-            <View style={[styles.space, styles.keysPosition]}>
-              <Text style={[styles.letter27, styles.letterTypo]}>스페이스</Text>
-            </View>
-            <View style={[styles.keysLabel1, styles.letter28Layout]}>
-              <Text style={[styles.letter28, styles.letter28Layout]}>확인</Text>
-            </View>
-          </View>
+          ))}
+        </ScrollView>
+        <View style={styles.bottomInputContainer}>
+          <TextInput
+            style={styles.textInput}
+            placeholder="전문가에게 직접 물어보세요."
+            placeholderTextColor={Color.colorGray_300}
+            value={message}
+            onChangeText={setMessage}
+          />
+          <Pressable style={styles.sendButton} onPress={handleSendMessage}>
+            <Text style={styles.sendButtonText}>↵</Text>
+          </Pressable>
         </View>
-        <Text style={styles.text}>
-          부적절한 행동이 감지되면 제재될 수 있어요.
-        </Text>
       </View>
     </>
   );
@@ -226,185 +155,7 @@ const styles = StyleSheet.create({
     fontSize: FontSize.bodyRegular_size,
     fontFamily: "SFProText",
   },
-  topRowPosition: {
-    right: 6,
-    position: "absolute",
-  },
-  providerTypo: {
-    fontWeight: "500",
-    lineHeight: 12,
-    letterSpacing: -0.1,
-    fontFamily: "SFProText",
-    fontSize: FontSize.size_xs,
-    textAlign: "left",
-    color: Color.miscellaneousTextFieldBG,
-  },
-  keysShadowBox7: {
-    backgroundColor: Color.darkPrimary,
-    borderRadius: Border.br_8xs,
-    shadowOpacity: 1,
-    elevation: 0,
-    shadowRadius: 0,
-    shadowOffset: {
-      width: 0,
-      height: 1,
-    },
-    shadowColor: "rgba(0, 0, 0, 0.3)",
-    position: "absolute",
-  },
-  keysShadowBox6: {
-    left: 38,
-    backgroundColor: Color.darkPrimary,
-    borderRadius: Border.br_8xs,
-    shadowOpacity: 1,
-    elevation: 0,
-    shadowRadius: 0,
-    shadowOffset: {
-      width: 0,
-      height: 1,
-    },
-    shadowColor: "rgba(0, 0, 0, 0.3)",
-    height: 43,
-    top: 0,
-    position: "absolute",
-  },
-  keysShadowBox5: {
-    left: 76,
-    backgroundColor: Color.darkPrimary,
-    borderRadius: Border.br_8xs,
-    shadowOpacity: 1,
-    elevation: 0,
-    shadowRadius: 0,
-    shadowOffset: {
-      width: 0,
-      height: 1,
-    },
-    shadowColor: "rgba(0, 0, 0, 0.3)",
-    height: 43,
-    top: 0,
-    position: "absolute",
-  },
-  keysShadowBox4: {
-    left: 114,
-    backgroundColor: Color.darkPrimary,
-    borderRadius: Border.br_8xs,
-    shadowOpacity: 1,
-    elevation: 0,
-    shadowRadius: 0,
-    shadowOffset: {
-      width: 0,
-      height: 1,
-    },
-    shadowColor: "rgba(0, 0, 0, 0.3)",
-    height: 43,
-    top: 0,
-    position: "absolute",
-  },
-  keysShadowBox3: {
-    left: 152,
-    backgroundColor: Color.darkPrimary,
-    borderRadius: Border.br_8xs,
-    shadowOpacity: 1,
-    elevation: 0,
-    shadowRadius: 0,
-    shadowOffset: {
-      width: 0,
-      height: 1,
-    },
-    shadowColor: "rgba(0, 0, 0, 0.3)",
-    height: 43,
-    top: 0,
-    position: "absolute",
-  },
-  keysShadowBox2: {
-    left: 190,
-    backgroundColor: Color.darkPrimary,
-    borderRadius: Border.br_8xs,
-    shadowOpacity: 1,
-    elevation: 0,
-    shadowRadius: 0,
-    shadowOffset: {
-      width: 0,
-      height: 1,
-    },
-    shadowColor: "rgba(0, 0, 0, 0.3)",
-    height: 43,
-    top: 0,
-    position: "absolute",
-  },
-  keysShadowBox1: {
-    left: 228,
-    backgroundColor: Color.darkPrimary,
-    borderRadius: Border.br_8xs,
-    shadowOpacity: 1,
-    elevation: 0,
-    shadowRadius: 0,
-    shadowOffset: {
-      width: 0,
-      height: 1,
-    },
-    shadowColor: "rgba(0, 0, 0, 0.3)",
-    height: 43,
-    top: 0,
-    position: "absolute",
-  },
-  letterTypo1: {
-    width: 31,
-    fontWeight: "300",
-    textTransform: "lowercase",
-    fontSize: FontSize.size_5xl,
-    top: "50%",
-    marginTop: -15.5,
-    textAlign: "center",
-    color: Color.miscellaneousTextFieldBG,
-    left: 0,
-    position: "absolute",
-  },
-  keysIconLayout: {
-    width: 42,
-    borderRadius: Border.br_8xs,
-    top: 116,
-    position: "absolute",
-  },
-  keysPosition: {
-    bottom: 3,
-    top: 3,
-  },
-  keysShadowBox: {
-    backgroundColor: Color.colorDarkslategray_200,
-    borderRadius: Border.br_8xs,
-    shadowOpacity: 1,
-    elevation: 0,
-    shadowRadius: 0,
-    shadowOffset: {
-      width: 0,
-      height: 1,
-    },
-    shadowColor: "rgba(0, 0, 0, 0.3)",
-  },
-  letterTypo: {
-    letterSpacing: -0.3,
-    fontSize: FontSize.size_base,
-    marginTop: -9.5,
-    top: "50%",
-    fontFamily: "SFProText",
-    textAlign: "center",
-    color: Color.miscellaneousTextFieldBG,
-    left: 0,
-  },
-  iconLayout: {
-    maxHeight: "100%",
-    maxWidth: "100%",
-    borderRadius: Border.br_8xs,
-    top: 0,
-    position: "absolute",
-    overflow: "hidden",
-  },
-  letter28Layout: {
-    width: 87,
-    position: "absolute",
-  },
-  iphoneSe2ndGenerationChild: {
+  iphoneSe2ndGenerationAiChild: {
     backgroundColor: Color.colorGray_100,
     height: 67,
     top: 0,
@@ -488,7 +239,7 @@ const styles = StyleSheet.create({
   },
   title: {
     top: "25%",
-    left: "32.72%",
+    left: "36.57%",
     fontWeight: "700",
     fontFamily: "SFProDisplay",
     lineHeight: 22,
@@ -534,322 +285,74 @@ const styles = StyleSheet.create({
     width: 364,
     height: 41,
   },
-  batteryIcon: {
-    width: 27,
-    height: 12,
-    top: 5,
-    right: 6,
+  messagesContainer: {
+    flex: 1,
+    padding: 10,
+    top: 100,
   },
-  timeIcon: {
-    marginLeft: -15.4,
-    left: "50%",
-    height: 9,
-    width: 32,
-    top: 5,
-    position: "absolute",
+  messageBubble: {
+    padding: 10,
+    borderRadius: 10,
+    marginBottom: 5,
+    maxWidth: "80%",
+    alignSelf: "flex-start",
   },
-  receptionIcon: {
-    width: 17,
-    height: 10,
+  sentMessage: {
+    backgroundColor: Color.colorsBlue1,
+    alignSelf: "flex-end",
   },
-  provider: {
-    marginLeft: 4,
-    fontFamily: "SFProText",
+  receivedMessage: {
+    backgroundColor: Color.colorGray_100,
+    alignSelf: "flex-start",
   },
-  provider1: {
-    fontFamily: "SFProText",
-  },
-  providerWrapper: {
-    paddingLeft: Padding.p_9xs,
-    marginLeft: 4,
-    flexDirection: "row",
-  },
-  service: {
-    top: 4,
-    left: 7,
-    flexDirection: "row",
-  },
-  iphoneStatusBar: {
-    top: 2,
-    height: 20,
-  },
-  letter: {
-    fontWeight: "300",
-    textTransform: "lowercase",
-    fontSize: FontSize.size_5xl,
-    top: "50%",
-    marginTop: -15.5,
-    fontFamily: "SFProText",
-    width: 32,
-    textAlign: "center",
+  messageText: {
     color: Color.miscellaneousTextFieldBG,
-    left: 0,
+    fontSize: FontSize.bodyRegular_size,
+    fontFamily: "SFProText",
+  },
+  bottomInputContainer: {
     position: "absolute",
-  },
-  keysLetter: {
-    right: 228,
-    height: 43,
+    bottom: 0,
     left: 0,
-    top: 0,
-  },
-  keysLetter1: {
-    right: 190,
-  },
-  keysLetter2: {
-    right: 152,
-  },
-  keysLetter3: {
-    right: 114,
-  },
-  keysLetter4: {
-    right: 76,
-  },
-  keysLetter5: {
-    right: 38,
-  },
-  keysLetter6: {
     right: 0,
+    padding: 10,
+    flexDirection: "row",
+    backgroundColor: Color.colorGray_300,
+    alignItems: "center",
+    borderTopWidth: 1,
+    borderTopColor: Color.miscellaneousBarBorder,
   },
-  bottomRow: {
-    right: 57,
-    left: 58,
-    height: 43,
-    top: 116,
-    position: "absolute",
+  textInput: {
+    flex: 1,
+    height: 40,
+    borderColor: Color.miscellaneousBarBorder,
+    borderWidth: 1,
+    borderRadius: 20,
+    paddingHorizontal: 10,
+    marginRight: 10,
+    backgroundColor: Color.colorGray_100,
+    color: Color.miscellaneousTextFieldBG,
   },
-  keysLetter7: {
-    right: 304,
-    height: 43,
-    left: 0,
-    top: 0,
-  },
-  keysLetter8: {
-    right: 266,
-  },
-  keysLetter9: {
-    right: 228,
-  },
-  keysLetter10: {
-    right: 190,
-  },
-  keysLetter11: {
-    right: 152,
-  },
-  keysLetter12: {
-    right: 114,
-  },
-  keysLetter13: {
-    right: 76,
-  },
-  keysLetter14: {
-    left: 266,
-    right: 38,
-    height: 43,
-    top: 0,
-  },
-  keysLetter15: {
-    left: 304,
-    height: 43,
-    right: 0,
-    top: 0,
-  },
-  middleRow: {
-    top: 62,
-    right: 17,
-    left: 22,
-    height: 43,
-    position: "absolute",
-  },
-  letter16: {
-    fontFamily: "SFProDisplay",
-  },
-  keysLetter16: {
-    right: 333,
-    height: 43,
-    left: 0,
-    top: 0,
-  },
-  letter17: {
-    fontFamily: "SFProDisplay",
+  sendButton: {
+    backgroundColor: Color.colorsBlue1,
+    borderRadius: 20,
+    paddingHorizontal: 20,
+    paddingVertical: 10,
     justifyContent: "center",
-    display: "flex",
     alignItems: "center",
   },
-  keysLetter17: {
-    right: 296,
-    left: 37,
-    height: 43,
-    top: 0,
+  sendButtonText: {
+    color: Color.colorGray_100,
+    fontSize: FontSize.bodyRegular_size,
+    fontFamily: FontFamily.sFProText,
+    fontWeight: "600",
   },
-  letter18: {
-    fontFamily: "SFProText",
-  },
-  keysLetter18: {
-    right: 259,
-    left: 74,
-    height: 43,
-    top: 0,
-  },
-  keysLetter19: {
-    right: 222,
-    left: 111,
-    height: 43,
-    top: 0,
-  },
-  keysLetter20: {
-    right: 185,
-    left: 148,
-    height: 43,
-    top: 0,
-  },
-  keysLetter21: {
-    right: 148,
-    left: 185,
-    height: 43,
-    top: 0,
-  },
-  keysLetter22: {
-    right: 111,
-    left: 222,
-    height: 43,
-    top: 0,
-  },
-  keysLetter23: {
-    right: 74,
-    left: 259,
-    height: 43,
-    top: 0,
-  },
-  keysLetter24: {
-    right: 37,
-    left: 296,
-    height: 43,
-    top: 0,
-  },
-  keysLetter25: {
-    left: 333,
-    height: 43,
-    right: 0,
-    top: 0,
-  },
-  topRow: {
-    top: 8,
-    left: 5,
-    height: 43,
-  },
-  keysIcon: {
-    left: 3,
-    height: 43,
-  },
-  keysIcon1: {
-    height: 42,
-    right: 3,
-  },
-  iphoneAlphabetQwerty: {
-    height: 169,
-    alignSelf: "stretch",
-    overflow: "hidden",
-  },
-  letter26: {
-    width: 40,
-    position: "absolute",
-  },
-  keysLabel: {
-    right: 85,
-    bottom: 0,
-    left: 0,
-    top: 0,
-    position: "absolute",
-  },
-  keysIcon2: {
-    bottom: 1,
-    left: 94,
-    right: 0,
-  },
-  emojiIcon: {
-    left: 47,
-    right: 38,
-    bottom: 0,
-  },
-  keysLabelParent: {
-    width: 125,
-    left: 3,
-    position: "absolute",
-  },
-  letter27: {
-    width: 143,
-    position: "absolute",
-  },
-  space: {
-    right: 97,
-    left: 135,
-    backgroundColor: Color.darkPrimary,
-    borderRadius: Border.br_8xs,
-    shadowOpacity: 1,
-    elevation: 0,
-    shadowRadius: 0,
-    shadowOffset: {
-      width: 0,
-      height: 1,
-    },
-    shadowColor: "rgba(0, 0, 0, 0.3)",
-    position: "absolute",
-  },
-  letter28: {
-    letterSpacing: -0.3,
-    fontSize: FontSize.size_base,
-    marginTop: -9.5,
-    top: "50%",
-    fontFamily: "SFProText",
-    textAlign: "center",
-    color: Color.miscellaneousTextFieldBG,
-    left: 0,
-  },
-  keysLabel1: {
-    backgroundColor: Color.colorDarkslategray_200,
-    borderRadius: Border.br_8xs,
-    shadowOpacity: 1,
-    elevation: 0,
-    shadowRadius: 0,
-    shadowOffset: {
-      width: 0,
-      height: 1,
-    },
-    shadowColor: "rgba(0, 0, 0, 0.3)",
-    bottom: 3,
-    top: 3,
-    right: 3,
-  },
-  iphoneControllerPortrait: {
-    height: 49,
-    alignSelf: "stretch",
-    overflow: "hidden",
-  },
-  keyboardsIphone: {
-    top: 449,
-    backgroundColor: Color.colorGray_300,
-    left: 0,
-    position: "absolute",
-    overflow: "hidden",
-  },
-  text: {
-    top: 75,
-    left: 86,
-    fontSize: FontSize.size_xs,
-    fontFamily: "SFProDisplay",
-    lineHeight: 22,
-    textAlign: "center",
-    color: Color.miscellaneousTextFieldBG,
-    letterSpacing: 0,
-    position: "absolute",
-  },
-  iphoneSe2ndGeneration: {
+  iphoneSe2ndGenerationAi: {
     backgroundColor: Color.colorDarkslategray_100,
     flex: 1,
     height: 667,
-    overflow: "hidden",
     width: "100%",
   },
 });
 
-export default IPhoneSE2ndGeneration3;
+export default IPhoneSE2ndGenerationAI;
