@@ -76,41 +76,6 @@ const IPhoneSE2ndGeneration = () => {
         <Text style={styles.namePrompt}>이름을 알고있다면?</Text>
         <Text style={styles.directSearch}>직접 검색하기</Text>
         <Text style={styles.userMode}>일반 사용자 모드</Text>
-        <Pressable
-          onPress={() => {
-            navigation.navigate("IPhoneSE2ndGeneration3");
-          }}
-        >
-          <Text style={{ fontFamily: "NanumSquareNeo", marginTop: 10 }}>3</Text>
-        </Pressable>
-        <Pressable
-          onPress={() => {
-            navigation.navigate("IPhoneSE2ndGeneration4");
-          }}
-        >
-          <Text>4</Text>
-        </Pressable>
-        <Pressable
-          onPress={() => {
-            navigation.navigate("IPhoneSE2ndGeneration5");
-          }}
-        >
-          <Text>5</Text>
-        </Pressable>
-        <Pressable
-          onPress={() => {
-            navigation.navigate("IPhoneSE2ndGeneration6");
-          }}
-        >
-          <Text>6</Text>
-        </Pressable>
-        <Pressable
-          onPress={() => {
-            navigation.navigate("IPhoneSE2ndGenerationAI");
-          }}
-        >
-          <Text>AI</Text>
-        </Pressable>
       </View>
     </>
   );

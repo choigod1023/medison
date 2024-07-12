@@ -7,6 +7,7 @@ import {
   Pressable,
   TextInput,
   ScrollView,
+  Alert, // Import Alert for triggering an event
 } from "react-native";
 import { Image } from "expo-image";
 import StatePlaceholder from "../components/StatePlaceholder";
@@ -26,15 +27,67 @@ const IPhoneSE2ndGenerationAI = () => {
 
   const handleSendMessage = () => {
     if (message.trim()) {
-      setMessages([...messages, { text: message, type: "sent" }]);
+      const newMessage: Message = { text: message, type: "sent" };
+      setMessages([...messages, newMessage]);
       setMessage("");
-      // Simulate a reply after a short delay
-      setTimeout(() => {
-        setMessages((prevMessages) => [
-          ...prevMessages,
-          { text: "자동 응답 메시지입니다.", type: "received" },
-        ]);
-      }, 1000);
+
+      // Check if the sent message contains the word "타이레놀"
+      if (message.includes("타이레놀")) {
+        // Trigger an event - here we'll use an alert for demonstration
+        setTimeout(() => {
+          setMessages((prevMessages) => [
+            ...prevMessages,
+            {
+              text: "타이레놀을 찾으시군요. 설명 페이지로 안내 해드리겠습니다.",
+              type: "received",
+            },
+          ]);
+        }, 1000);
+        setTimeout(() => {
+          navigation.navigate("IPhoneSE2ndGeneration5");
+        }, 3000);
+      } else if (
+        message.includes("쇼핑") ||
+        message.includes("구매") ||
+        message.includes("사고")
+      ) {
+        // Trigger an event - here we'll use an alert for demonstration
+        setTimeout(() => {
+          setMessages((prevMessages) => [
+            ...prevMessages,
+            {
+              text: "약 구매 페이지로 안내 해드리겠습니다.",
+              type: "received",
+            },
+          ]);
+        }, 1000);
+        setTimeout(() => {
+          navigation.navigate("IPhoneSE2ndGeneration6");
+        }, 3000);
+      } else if (message.includes("처방") || message.includes("오늘")) {
+        // Trigger an event - here we'll use an alert for demonstration
+        setTimeout(() => {
+          setMessages((prevMessages) => [
+            ...prevMessages,
+            {
+              text: "오늘 먹을 약을 안내 해드리겠습니다.",
+              type: "received",
+            },
+          ]);
+        }, 1000);
+        setTimeout(() => {
+          navigation.navigate("IPhoneSE2ndGeneration4");
+        }, 3000);
+      } else {
+        // Simulate a reply after a short delay
+
+        setTimeout(() => {
+          setMessages((prevMessages) => [
+            ...prevMessages,
+            { text: "자동 응답 메시지입니다.", type: "received" },
+          ]);
+        }, 1000);
+      }
     }
   };
 
